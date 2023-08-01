@@ -3707,7 +3707,7 @@ body {
 		.website[data-menuposition=full_menu] .top_menu .identity {
 			transition: opacity .5s cubic-bezier(.04, .99, .07, 1);
 			opacity: 0;
-			padding-top: 17vh;
+			padding-top: 0vh;
 			flex-grow: 1;
 			display: block;
 			text-align: center;
@@ -5409,7 +5409,15 @@ body {
 						.mob-log{
 								display: none;
 							}
+							
+							.identity{
+								visibility: visible;
+							}
+
 						@media (max-width: 450px) {
+							.identity{
+								visibility: hidden;
+							}
 							.mob-log{
 								display: block;
 							}
@@ -5464,7 +5472,8 @@ body {
                                 return false;
                             })();return false;"> </div>
 					</div>
-					<div class="identity section-item"><a style="width:inherit" href="index.html" target="_self"><img
+					<div class="identity section-item">
+						<a style="width:inherit" href="index.html" target="_self"><img
 								id="vbid-c637fb67-3dd01c13" alt="pic" data-elementtype="ICON"
 								class="lazyload icon element "
 								src="../sa1s3optim.patientpop.com/50x/filters_format(webp)/sc-assets/prd/practices/24e621d7-b821-466a-956e-b25178eba6a5/XyySOzFBrgtkxAQDaWT75QPiZmDTu0EzjeyiOidvxrCTxqG9HkcMQFud-mGA9C35ClhOlPRDGBC2W6JEgrfCBtpT"
