@@ -1147,6 +1147,15 @@ body {
 			transition: background-color .3s cubic-bezier(.25, 1, .5, 1)
 		}
 
+		@media (max-width: 450px) {
+			div[data-variant=button_variant_1]
+			{
+				padding: 5px 5px !important;
+
+			}
+			
+		}
+
 		div[data-variant=button_variant_1]:hover,
 		div[data-variant=button_variant_2]:hover,
 		div[data-variant=button_variant_3]:hover,
@@ -5399,8 +5408,8 @@ body {
 							width: 100%;
 							background: black;
 							color: white;
-							padding-top: 15px;
-							padding-bottom: 8px;
+							padding-top: 30px;
+							padding-bottom: 15px;
 							padding-left: 20px;
 							padding-right: 20px;
 
@@ -5413,8 +5422,15 @@ body {
 							.identity{
 								visibility: visible;
 							}
+							.top-address{
+								float: right;
+							}
 
 						@media (max-width: 450px) {
+						.top-strip {
+							padding-top: 15px;
+							padding-bottom: 8px;
+						}
 							.identity{
 								visibility: hidden;
 							}
@@ -5430,7 +5446,7 @@ body {
 							}
 
 							.website[data-menuposition=full_menu] .top_menu .buttons {
-								height: 265px;
+								height: 275px;
 							}
 
 							.website[data-menuposition=full_menu] .hamburger {
@@ -5440,13 +5456,16 @@ body {
 							.website[data-menuposition=full_menu].show-menu .hamburger {
 								top: 46px;
 							}
+							.top-address{
+								float: left;
+							}
 						}
 					</style>
 
 					<div class="top-strip">
-						<h3>✆ Phone (appointments):
-							281-377-4040</h3>
-						<h3 style="float: right;">Address: 16700 House Hahl Road, Building 8-B, Cypress</h3>
+						<h2>✆ Phone (appointments):
+							281-377-4040</h2>
+						<h2 class="top-address">✇ Address: 16700 House Hahl Road, Building 8-B, Cypress</h2>
 					</div>
 
 
@@ -5530,7 +5549,7 @@ body {
 					<div class="buttons">
 						
 						
-						<a style="width:inherit; margin-left: 12px" href="tel:281-377-4040" target="_self">
+						<a style="width:inherit; margin-left: 65px" href="tel:281-377-4040" target="_self">
 							<div id="vbid-476eedb7-2369da6b" class="element button_preset_3 " data-elementtype="BUTTON"
 								data-variant="button_variant_1">281-377-4040</div>
 						</a>
@@ -6438,8 +6457,6 @@ body {
 
 						#vbid-b50f71be-4633-403b-80bf-5b70c94db581 .children {
 							max-width: 100%;
-							padding-top: 40px;
-							padding-bottom: 40px;
 							padding-left: 50px;
 							--section-horizontal-padding: 50px;
 							padding-right: 50px
@@ -6565,8 +6582,7 @@ body {
 
 						#vbid-b50f71be-4633-403b-80bf-5b70c94db581 .section-header .text-side {
 							max-width: 510px;
-							margin: 20px;
-							padding: 20px
+							margin-top: 35px;
 						}
 
 						#vbid-b50f71be-4633-403b-80bf-5b70c94db581 .section-header [data-elementtype=RATING] div {}
@@ -8966,6 +8982,16 @@ ol, li {
 								align-items: center;
 								max-width: 1500px;
 							}
+						}
+						@media (max-width: 450px) {
+
+							.content {
+								display: block;
+							}
+						.img-footer {
+							margin-top: 30px;
+						}
+							
 						}
 
 						*,
