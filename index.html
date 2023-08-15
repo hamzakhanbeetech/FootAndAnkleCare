@@ -3114,6 +3114,849 @@ body {
 			box-sizing: content-box !important
 		}
 
+		.website menu.bottom_footer {
+			box-sizing: border-box
+		}
+
+		.website[data-footerposition=hidden_footer] menu.bottom_footer {
+			display: none !important
+		}
+
+		.website[data-footerposition=horizontal_footer] .bottom_footer {
+			flex-direction: column;
+			background-color: black !important
+		}
+
+		.website[data-footerposition=horizontal_footer] .bottom_footer .bottom_footer_elements {
+			display: flex;
+			flex-direction: row
+		}
+
+		.website[data-footerposition=vertical_footer] .bottom_footer {
+			flex-direction: column;
+			align-items: center;
+			background-color: var(--menu-background-color) !important
+		}
+
+		menu.bottom_footer {
+			display: flex;
+			position: relative;
+			padding: 0;
+			margin: 0;
+			align-items: center;
+			overflow: hidden;
+			flex-wrap: wrap
+		}
+
+		menu.bottom_footer .pic-side,
+		menu.bottom_footer .links,
+		menu.bottom_footer .text-side,
+		menu.bottom_footer .identity {
+			position: relative;
+			flex-grow: 1;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			padding: 20px;
+			box-sizing: border-box
+		}
+
+		menu.bottom_footer .pic-side {
+			padding: 0
+		}
+
+		menu.bottom_footer .links,
+		menu.bottom_footer .text-side {
+			position: relative;
+			flex-grow: 1;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			min-width: 140px;
+			height: fit-content;
+			padding: 10px
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .text-side {
+			border-left: 1px solid #80808070
+		}
+
+		menu.bottom_footer .links {
+			min-width: inherit;
+			justify-content: center;
+			max-width: 100%;
+			flex-wrap: wrap
+		}
+
+		menu.bottom_footer .identity {
+			flex-direction: column;
+			justify-content: center;
+			align-items: baseline
+		}
+
+		menu.bottom_footer .links {
+			align-items: baseline;
+			height: fit-content
+		}
+
+		menu.bottom_footer .links:empty,
+		menu.bottom_footer .buttons:empty,
+		menu.bottom_footer .logotype:empty,
+		menu.bottom_footer .identity:empty,
+		menu.bottom_footer .text-side:empty {
+			display: none
+		}
+
+		menu.bottom_footer .links>li {
+			margin: 20px;
+			font-weight: 700
+		}
+
+		menu.bottom_footer .links>li .submenu {
+			padding: 10px 0 0;
+			font-weight: 400
+		}
+
+		menu.bottom_footer[data-horizontalalign=center] .links>li,
+		menu.bottom_footer[data-horizontalalign=center] .links>li .submenu>li {
+			text-align: center
+		}
+
+		menu.bottom_footer[data-horizontalalign=left] .links>li,
+		menu.bottom_footer[data-horizontalalign=left] .links>li .submenu>li {
+			text-align: left
+		}
+
+		menu.bottom_footer[data-horizontalalign=right] .links>li,
+		menu.bottom_footer[data-horizontalalign=right] .links>li .submenu>li {
+			text-align: right
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .pic-side,
+		menu[data-footerposition=horizontal_footer] .pic-side img.pic {
+			width: 100%
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer {
+			padding-top: 20px;
+			padding-bottom: 0
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .identity {
+			order: 1;
+			align-items: center;
+			padding-top: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			margin-bottom: 0
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .identity .logotype {
+			align-items: center;
+			text-align: center
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .text-side {
+			order: 3;
+			text-align: center;
+			flex-direction: column;
+			padding: 10px;
+			margin: 10px
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .buttons {
+			order: 4;
+			text-align: center
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .links {
+			order: 5;
+			padding-bottom: 20px !important
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .pic-side {
+			order: 6
+		}
+
+		.website[data-footerposition=vertical_footer] menu.bottom_footer .section-link {
+			order: 7;
+			padding-bottom: 16px
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer {
+			flex-wrap: nowrap;
+			padding: 20px
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .identity {
+			flex-grow: 0;
+			padding: 10px;
+			min-width: 100px
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .text-side {
+			flex-direction: column;
+			align-items: start;
+			flex-grow: 1
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .buttons {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 0
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .links {
+			flex-grow: 1
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .pic-side {
+			align-self: stretch
+		}
+
+		.website[data-footerposition=horizontal_footer] menu.bottom_footer .pic-side iframe {
+			height: 100%
+		}
+
+		@media only screen and (max-width: 800px) {
+			menu.bottom_footer {
+				flex-wrap: wrap !important
+			}
+		}
+	</style>
+
+
+
+	<style>
+		section[data-arranger=flex][data-arranger-arrows-position=outside] .slide-arrows,
+		section[data-arranger=flex][data-arranger-arrows-position=overlay] .slide-arrows {
+			z-index: 3
+		}
+
+		section[data-arranger=flex][data-arranger-arrows-position=none] .slide-arrows button {
+			display: none
+		}
+
+		section[data-arranger=flex][data-arranger-arrows-position=outside] .slide-arrows button,
+		section[data-arranger=flex][data-arranger-arrows-position=overlay] .slide-arrows button {
+			position: absolute;
+			display: block;
+			top: 50%;
+			z-index: 2;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 9px 12px;
+			background-color: transparent;
+			border: 2px solid rgba(255, 255, 255, .5);
+			border-radius: 4px;
+			box-shadow: 0 .25em .5em #0000001a;
+			text-shadow: 0 .25em .5em rgba(0, 0, 0, .1);
+			opacity: 1;
+			cursor: pointer;
+			transition: opacity .15s ease, border .3s ease-in-out;
+			transform: translateY(-50%);
+			line-height: 1
+		}
+
+		section[data-arranger=flex] .slide-arrows .left-arrow {
+			left: 2em
+		}
+
+		section[data-arranger=flex] .slide-arrows .right-arrow {
+			right: 2em
+		}
+
+		section[data-arranger=flex] {
+			--slideshow-arrows-color: 128, 128, 128
+		}
+
+		section[data-arranger=flex] .slide-arrows button {
+			border-color: rgba(var(--slideshow-arrows-color), .5) !important
+		}
+
+		section[data-arranger=flex] .slide-arrows svg path {
+			fill: rgb(var(--slideshow-arrows-color));
+			transition: fill .3s ease-in-out
+		}
+
+		section[data-arranger=flex] .slide-arrows .left-arrow svg {
+			transform: rotate(180deg)
+		}
+	</style>
+	<style>
+		@font-face {
+			font-family: open-sans;
+			font-style: normal;
+			font-weight: 400;
+			src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"), url(https://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: jaf-bernino-sans;
+			src: url(https://fonts.gstatic.com/s/durusans/v20/xn7iYH8xwmSyTvEV_HOBSP3ZVtyGZg.woff2) format("woff2");
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: ff-tisa-web-pro;
+			src: url(https://fonts.gstatic.com/s/durusans/v20/xn7iYH8xwmSyTvEV_HOBSP3ZVtyGZg.woff2) format("woff2");
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: freight-sans-pro;
+			src: local("Arial");
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Raleway Thin;
+			font-style: normal;
+			font-weight: 100;
+			src: local("Raleway Thin"), local("Raleway-Thin"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao7CIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Raleway;
+			font-style: normal;
+			font-weight: 400;
+			src: local("Raleway"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Raleway Heavy;
+			font-style: normal;
+			font-weight: 900;
+			src: local("Raleway Heavy"), local("Raleway-Heavy"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Titillium WebThin;
+			font-style: normal;
+			font-weight: 200;
+			src: local("Titillium WebThin"), local("TitilliumWeb-Thin"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaorCIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Titillium Web;
+			font-style: normal;
+			font-weight: 400;
+			src: local("Titillium Web"), local("TitilliumWeb-Regular"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Titillium WebBlack;
+			font-style: normal;
+			font-weight: 900;
+			src: local("Titillium WebBlack"), local("TitilliumWeb-Black"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Roboto Slab Light;
+			font-style: normal;
+			font-weight: 100;
+			src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao7CIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Roboto Slab;
+			font-style: normal;
+			font-weight: 400;
+			src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrEVIT9d0c8.woff2) format("woff2");
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: HelveNueThinNormal;
+			src: url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.eot);
+			src: url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.eot?iefix) format("eot"), url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.woff) format("woff"), url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.ttf) format("truetype"), url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.svg#webfontJR0GaG5Z) format("svg");
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: DahliaMedium;
+			src: url(https://fontsforwellpath.netlify.app/fonts/Dahlia-Medium.woff2) format("woff2"), url(https://fontsforwellpath.netlify.app/fonts/Dahlia-Medium.woff) format("woff");
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: CanelaWeb;
+			src: url(https://fontsforwellpath.netlify.app/fonts/Canela-Medium-Web.woff2) format("woff2"), url(https://fontsforwellpath.netlify.app/fonts/Canela-Medium-Web.woff) format("woff");
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: LaLuxe;
+			src: url(https://fontsforwellpath.netlify.app/fonts/la_luxe.woff2) format("woff2"), url(https://fontsforwellpath.netlify.app/fonts/la_luxe.woff) format("woff");
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap
+		}
+	</style>
+	<style>
+		.odometer.odometer-auto-theme,
+		.odometer.odometer-theme-minimal,
+		.odometer.odometer-auto-theme .odometer-digit,
+		.odometer.odometer-theme-minimal .odometer-digit {
+			display: inline-block;
+			vertical-align: middle;
+			vertical-align: auto;
+			zoom: 1;
+			display: inline;
+			position: relative
+		}
+
+		.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+		.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-spacer {
+			display: inline-block;
+			vertical-align: middle;
+			vertical-align: auto;
+			zoom: 1;
+			display: inline;
+			visibility: hidden
+		}
+
+		.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+		.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-inner {
+			text-align: left;
+			display: block;
+			position: absolute;
+			inset: 0;
+			overflow: hidden
+		}
+
+		.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+		.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon {
+			display: block
+		}
+
+		.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+		.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon-inner {
+			display: block;
+			-webkit-backface-visibility: hidden
+		}
+
+		.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+		.odometer.odometer-theme-minimal .odometer-digit .odometer-value {
+			display: block;
+			-webkit-transform: translateZ(0)
+		}
+
+		.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+		.odometer.odometer-theme-minimal .odometer-digit .odometer-value.odometer-last-value {
+			position: absolute
+		}
+
+		.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+		.odometer.odometer-theme-minimal.odometer-animating-up .odometer-ribbon-inner {
+			-webkit-transition: -webkit-transform 2s;
+			-moz-transition: -moz-transform 2s;
+			-ms-transition: -ms-transform 2s;
+			-o-transition: -o-transform 2s;
+			transition: transform 2s
+		}
+
+		.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+		.odometer.odometer-theme-minimal.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+		.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+		.odometer.odometer-theme-minimal.odometer-animating-down .odometer-ribbon-inner {
+			-webkit-transform: translateY(-100%);
+			-moz-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			-o-transform: translateY(-100%);
+			transform: translateY(-100%)
+		}
+
+		.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+		.odometer.odometer-theme-minimal.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+			-webkit-transition: -webkit-transform 2s;
+			-moz-transition: -moz-transform 2s;
+			-ms-transition: -ms-transform 2s;
+			-o-transition: -o-transform 2s;
+			transition: transform 2s;
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+			transform: translateY(0)
+		}
+	</style>
+	<!-- generated fonts list from user selection -->
+	<style>
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf) format('truetype');
+		}
+
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw5aX8.ttf) format('truetype');
+		}
+
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aX8.ttf) format('truetype');
+		}
+	</style>
+	<script type="text/javascript">"use strict"; class RateLimiter { constructor(fillRate, bucketSize, retryOnErrors = void 0) { this.add = action => { const curMillis = this.fillBucket(); const recovery = e => { if ((retryOnErrors || []).find(_ => e.message.includes(_))) { console.debug(`recovering from error [${e.message}]`); return this.add(action) } else { return Promise.reject(e) } }; if (this.curTokens > 0) { this.curTokens -= 1; return action().catch(recovery) } else { const clientPromise = new Promise((resolve, reject) => { this.queue.push(() => { return action().then(resolve).catch(recovery).catch(e => reject(e)) }) }); if (!this.pendingFlush) { this.pendingFlush = setTimeout(this.flush, 1 + 1e3 - curMillis % 1e3) } return clientPromise } }; this.flush = () => { const curMillis = this.fillBucket(); if (this.pendingFlush) { clearTimeout(this.pendingFlush); this.pendingFlush = void 0 } if (this.queue.length > 0) { while (this.curTokens > 0 && this.queue.length > 0) { this.curTokens -= 1; const pendingCall = this.queue.shift(); pendingCall && pendingCall() } } if (this.queue.length > 0) { this.pendingFlush = setTimeout(this.flush, 1e3 - curMillis % 1e3) } return curMillis }; this.fillBucket = () => { const curMillis = new Date().getTime(); const curSeconds = Math.round(curMillis / 1e3); if (this.lastIncrementTime === 0) { this.curTokens = this.bucketSize } else if (this.curTokens !== this.bucketSize && this.lastIncrementTime !== curSeconds) { const secondsDiff = curSeconds - this.lastIncrementTime; this.curTokens = Math.min(this.bucketSize, secondsDiff * this.fillRate) } this.lastIncrementTime = curSeconds; return curMillis }; this.bucketSize = bucketSize; this.fillRate = fillRate; this.queue = []; this.lastIncrementTime = 0; this.curTokens = 0; this.fillBucket() } } window.RateLimiter = RateLimiter; const debounceHandles = new Map; const debounce = (id, waitSeconds, action) => { if (debounceHandles.has(id)) { clearTimeout(debounceHandles.get(id)); debounceHandles.delete(id) } debounceHandles.set(id, setTimeout(() => { debounceHandles.delete(id); action() }, waitSeconds * 1e3)) }; window.debounce = debounce; const createArrowSvg = () => { const arrowForwardSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg"); const arrowForwardPath = document.createElementNS("http://www.w3.org/2000/svg", "path"); arrowForwardSvg.setAttribute("aria-hidden", "true"); arrowForwardSvg.setAttribute("viewbox", "0 0 24 24"); arrowForwardSvg.setAttribute("focusable", "false"); arrowForwardPath.setAttribute("d", "M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"); arrowForwardPath.setAttribute("fill", "none"); arrowForwardSvg.setAttribute("width", "24px"); arrowForwardSvg.setAttribute("height", "24px"); arrowForwardSvg.appendChild(arrowForwardPath); return arrowForwardSvg }; window.createArrowSvg = createArrowSvg;
+	</script>
+	<script type="text/javascript">"use strict"; const IMCEvents = { initialized: {}, eventListeners: {}, eventTicking: {} }; IMCEvents.registerEventOnce = function (eventName, eventIdentifier, action) { const idKey = eventName + "/" + eventIdentifier; if (!IMCEvents.initialized[idKey]) { IMCEvents.initialized[idKey] = true; window.addEventListener("DOMContentLoaded", () => action(null)); if (!IMCEvents.eventListeners[eventName]) { IMCEvents.eventListeners[eventName] = []; window.addEventListener(eventName, ev => { if (!IMCEvents.eventTicking[eventName]) { window.requestAnimationFrame(function () { IMCEvents.eventListeners[eventName].forEach(listener => listener(ev)); IMCEvents.eventTicking[eventName] = false }); IMCEvents.eventTicking[eventName] = true } }) } IMCEvents.eventListeners[eventName].push(action) } }; window.IMCEvents = IMCEvents;
+	</script>
+	<script type="text/javascript">"use strict"; const Effects = { scrollInitialized: false, odometerInitialized: false }; Effects.init = function () { if (!Effects.odometerInitialized) { Effects.odometerInitialized = true; lazyOdometerInit() } if (!Effects.scrollInitialized) { Effects.scrollInitialized = true; lazyStaticWebsiteInit(); effectsInit() } }; let last_known_scroll_position = 0; let ticking = false; let _cache = {}; let _cacheCleaner = {}; function cache(key, timeMS, calc) { if (_cache[key]) { return _cache[key] } else { let calcValue = calc(); cache[key] = calcValue; if (!_cacheCleaner[key]) { _cacheCleaner[key] = setTimeout(() => { delete _cacheCleaner[key]; delete _cache[key] }, timeMS) } return calcValue } } let animationTimeout; function bumpAnimationTimeout() { animationTimeout && clearTimeout(animationTimeout); animationTimeout = setTimeout(function () { clearTimeout(animationTimeout); animationTimeout = void 0; ticking = false }, .5) } function onScroll() { const body = document.querySelector("body"); last_known_scroll_position = window.scrollY; if (last_known_scroll_position > 50) { const identity = document.getElementsByClassName("identity"); const menuIdentity = identity[0]; menuIdentity && document.documentElement.style.setProperty("--identity-height", menuIdentity.clientHeight * -1 + "px"); body.setAttribute("scroll-status", "scrolled") } else { body.setAttribute("scroll-status", "top") } if (!animationTimeout) { ticking = true; doAnimationCycle() } bumpAnimationTimeout() } function ignoreError(func) { try { func() } catch (e) { } } const doAnimationCycle = function () { window.requestAnimationFrame(function () { let sections = cache("sections", 500, () => document.querySelectorAll("section")); for (let idx = 0; idx < sections.length; idx++) { const section = sections[idx]; cycleEffect(section) } if (ticking) setTimeout(doAnimationCycle, .05) }) }; const effectsInit = function () { window.addEventListener("scroll", onScroll); document.onmousemove = function (e) { document.documentElement.style.setProperty("--mouse-x", e.clientX + 10 + "px"); document.documentElement.style.setProperty("--mouse-y", e.clientY + 20 + "px") } }; const lazyOdometerInit = function () { if (!window.Odometer) { return } const odoDataAttribute = "data-odovalue"; const justNumbers = /^\d+$/; const lazyOdos = [].slice.call(document.querySelectorAll('section[data-effecttext=text-effect-7] *[data-elementtype="TITLE"]')).filter(_ => justNumbers.test(_.innerText.replace(/[,.]/g, "").trim())); let urlParams = new URLSearchParams(window.location.search); if (urlParams.get("screenshot") === "true" || !("IntersectionObserver" in window)) { } else if ("IntersectionObserver" in window) { const lazyOdoInstances = lazyOdos.map(odoEl => { const initialValue = odoEl.innerText.trim(); odoEl.setAttribute(odoDataAttribute, initialValue); return new Odometer({ el: odoEl, value: 0, format: initialValue.includes(",") ? "(,ddd).dd" : "(ddd).dd" }) }); let lazyOdoObserver = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { const odoEl = entry.target; const odoInst = lazyOdoInstances[lazyOdos.findIndex(_ => _ === odoEl)]; if (entry.isIntersecting) { setTimeout(() => { odoInst.update(odoEl.getAttribute(odoDataAttribute)) }, 200) } else { odoInst.update(0) } }) }); lazyOdos.forEach(function (lazyOdo) { lazyOdoObserver.observe(lazyOdo) }) } else { } }; const lazyStaticWebsiteInit = function () { const lazySections = [].slice.call(document.querySelectorAll("article")); let urlParams = new URLSearchParams(window.location.search); if (urlParams.get("screenshot") === "true" || !("IntersectionObserver" in window)) { lazySections.forEach(function (section) { section.setAttribute("data-visible", "true") }) } else if ("IntersectionObserver" in window) { let lazySectionObserver = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { let lazySection = entry.target; lazySection.setAttribute("data-visible", "true") } else { let lazySection = entry.target; lazySection.setAttribute("data-visible", "false") } }) }); lazySections.forEach(function (lazySection) { lazySectionObserver.observe(lazySection) }) } else { } }; const cycleEffect = function (section) { const site_offset = document.querySelector(".website").offsetTop; const top_end = window.pageYOffset - section.offsetTop + site_offset; if (section.getAttribute("data-imagescroll") === "parallax") { const parallex_ratio = 3; ignoreError(() => { section.getElementsByClassName("pic-side")[0].getElementsByTagName("img")[0].style.transform = "translate3d(0px, " + Math.round(top_end / parallex_ratio) + "px, -100px) translateZ(0)" }) } else { if (section.getAttribute("data-imagescroll") === "fixed") { const fixed_parallex_ratio = 1; ignoreError(() => { section.getElementsByClassName("pic-side")[0].getElementsByTagName("img")[0].style.transform = "translate3d(0px, " + top_end / fixed_parallex_ratio + "px, 0px) translateZ(0)" }) } else { if (section.getAttribute("data-imagescroll") === "normal") { ignoreError(() => { }) } } } }; window.Effects = Effects;
+	</script>
+	<script type="text/javascript">"use strict"; const Clamping = { clampingInitialized: false }; Clamping.init = function () { if (!Clamping.clampingInitialized) { Clamping.clampingInitialized = true; initializeClamping() } }; Clamping.recalcClamping = function () { [...document.getElementsByClassName("unclamper")].forEach(unclamper => { const target = window.document.getElementById(unclamper.getAttribute("data-unclampvbid")); if (target.scrollHeight > target.clientHeight) { unclamper.classList.remove("hidden") } else { unclamper.classList.add("hidden") } }) }; Clamping.unClampClick = e => { var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l; if ((_a = e == null ? void 0 : e.target) == null ? void 0 : _a.classList.contains("unclamper")) { const elementId = (_c = (_b = e.target) == null ? void 0 : _b.getAttribute("data-unclampvbid")) != null ? _c : null; if (elementId) { const item = (_f = (_e = (_d = e.target) == null ? void 0 : _d.parentElement) == null ? void 0 : _e.querySelector(`[id='${elementId}']`)) != null ? _f : null; if (item) { (_g = item == null ? void 0 : item.classList) == null ? void 0 : _g.remove("clamping") } else { const target = (_i = (_h = window.document) == null ? void 0 : _h.getElementById(elementId)) != null ? _i : null; (_j = target == null ? void 0 : target.classList) == null ? void 0 : _j.remove("clamping") } (_l = (_k = e.target) == null ? void 0 : _k.classList) == null ? void 0 : _l.add("hidden") } } }; function initializeClamping() { window.addEventListener("click", e => { Clamping.unClampClick(e) }); const resizeObserver = new ResizeObserver(() => { Clamping.recalcClamping() }); resizeObserver.observe(window.document.body) } window.Clamping = Clamping;
+	</script>
+	<script type="text/javascript">"use strict"; var __async = (__this, __arguments, generator) => { return new Promise((resolve, reject) => { var fulfilled = value => { try { step(generator.next(value)) } catch (e) { reject(e) } }; var rejected = value => { try { step(generator.throw(value)) } catch (e) { reject(e) } }; var step = x => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected); step((generator = generator.apply(__this, __arguments)).next()) }) }; const Menu = { originalMenuPosition: null, prevWindowWidth: null, stickTopSectionHeightTimerID: null, menuResizingTimerId: null }; let attribute = "data-menuposition"; function ifExistsWithDefault(value, action, defaultValue) { if (value) { return action(value) } else { return defaultValue } } function correctSubmenusPositions(site) { site.setAttribute("data-menucalculator", "active"); let htmlCollection = document.getElementsByClassName("submenu"); let array = [].slice.call(htmlCollection); let docWidth = document.body.clientWidth; array.forEach(item => { item.style.left = "22px"; if (item.clientWidth + item.parentNode.offsetLeft > docWidth) { let offset = docWidth - (item.clientWidth + item.parentNode.offsetLeft); item.style.left = offset + "px" } }); site.setAttribute("data-menucalculator", "inactive") } const setResizeHorizontal = () => { if (Menu.menuResizingTimerId) { clearTimeout(Menu.menuResizingTimerId) } Menu.menuResizingTimerId = setTimeout(() => { const site = document.querySelector("div.website[data-menuposition]"); site == null ? void 0 : site.setAttribute("resize-horizontal", "false") }, 800) }; function menuCalculations() { return () => __async(this, null, function* () { const site = document.querySelector("div.website[data-menuposition]"); if (site) { const initialSiteMenuPosition = site.getAttribute(attribute); site.setAttribute("menu-collapse", "false"); site.setAttribute("menu-shrink", "false"); site.setAttribute("resize-horizontal", "true"); if (Menu.originalMenuPosition === null) { Menu.originalMenuPosition = initialSiteMenuPosition } if (Menu.originalMenuPosition !== initialSiteMenuPosition && initialSiteMenuPosition !== "full_menu") { Menu.originalMenuPosition = initialSiteMenuPosition } site.setAttribute(attribute, Menu.originalMenuPosition) } let websiteLogo = document.querySelector('.top_menu img[data-elementtype="ICON"]'); if (websiteLogo && !websiteLogo.complete) { websiteLogo.onload = menuCalculations } let siteMenuPosition = site ? site.getAttribute(attribute) : void 0; let numOfLink = ifExistsWithDefault(document.querySelectorAll(".top_menu .links > li"), v => v.length, 0); let leftWidth = 0; let rightWidth = 0; let prevLeftWidth = 0; let prevRightWidth = 0; let entireWidth = 0; let foundMiddleFromLeft = false; let foundMiddleFromRight = false; let compensationToMiddle = 0; ifExistsWithDefault(document.querySelectorAll(".top_menu .links > li"), allLinks => allLinks.forEach(function (arrayItem) { arrayItem.setAttribute("ismiddle", "false"); entireWidth = entireWidth + arrayItem.clientWidth })); ifExistsWithDefault(document.querySelectorAll(".top_menu .links > li"), allLinks => allLinks.forEach(function (arrayItem, idx) { leftWidth = leftWidth + arrayItem.clientWidth; rightWidth = rightWidth + allLinks[allLinks.length - idx - 1].clientWidth; if (leftWidth >= entireWidth / 2 && foundMiddleFromLeft == false) { foundMiddleFromLeft = idx - 1; prevLeftWidth = leftWidth } if (rightWidth >= entireWidth / 2 && foundMiddleFromRight == false) { foundMiddleFromRight = idx + 1; prevRightWidth = rightWidth } })); let identityWidth = ifExistsWithDefault(document.querySelector(".top_menu .identity"), v => v.scrollWidth, 0); document.documentElement.style.setProperty("--identity-width", identityWidth + "px"); let allLinksArray = document.querySelectorAll(".top_menu .links > li"); if (prevRightWidth > prevLeftWidth) { allLinksArray[foundMiddleFromLeft].setAttribute("ismiddle", "true"); compensationToMiddle = (entireWidth - prevRightWidth - prevRightWidth) / -2 } else { const indexFromLeftTemp = allLinksArray.length - foundMiddleFromRight - 1; if (allLinksArray[indexFromLeftTemp]) { allLinksArray[indexFromLeftTemp].setAttribute("ismiddle", "true") } compensationToMiddle = (entireWidth - prevRightWidth - prevRightWidth) / -2 } let editorMenuHeight = ifExistsWithDefault(document.querySelector("header"), v => v.scrollHeight, 0); let identityHeight = ifExistsWithDefault(document.querySelector(".top_menu .identity"), v => v.scrollHeight, 0); let buttonsHeight = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.scrollHeight, 0); let linksHeight = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.scrollHeight, 0); let button1Height = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON"]'), v => v.scrollHeight, 0); let button2Height = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON2"]'), v => v.scrollHeight, 0); let button3Height = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON3"]'), v => v.scrollHeight, 0); const maxButtonHeight = Math.max(button1Height, button2Height, button3Height); let menuTop = document.getElementsByClassName("top_menu"); let menuTopInstance = menuTop && menuTop[0]; if (!menuTopInstance) return; document.documentElement.style.setProperty("--links-height", linksHeight + "px"); document.documentElement.style.setProperty("--buttons-height", buttonsHeight + "px"); document.documentElement.style.setProperty("--num-of-links", numOfLink); document.documentElement.style.setProperty("--compensation-to-middle", compensationToMiddle + "px"); let windowWidthNormalized = window.innerWidth; let windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; let mobileCheck = false; if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { mobileCheck = true } let buttonsWidth = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.clientWidth, 0); let linksWidth = ifExistsWithDefault(document.querySelectorAll(".top_menu .links .main-links"), v => { let linksWidth2 = 0; v.forEach(link => { var _a; const menuParent = link.querySelector(".menu-parent"); const styles = window.getComputedStyle(link); const spacing = parseInt(styles.borderLeftWidth) + parseInt(styles.borderRightWidth) + parseInt(styles.marginLeft) + parseInt(styles.marginRight) + parseInt(styles.paddingRight) + parseInt(styles.paddingLeft); linksWidth2 += (menuParent == null ? void 0 : menuParent.offsetWidth) ? menuParent.offsetWidth + (spacing || 0) : (_a = link.scrollWidth) != null ? _a : 0 }); return linksWidth2 }, 0); let linksHeightLatest = ifExistsWithDefault(document.querySelector(".top_menu .links"), v => v.clientHeight, 0); const spaceForSideMenuSpread = Math.max(0, windowHeight - identityHeight - linksHeightLatest - buttonsHeight - editorMenuHeight - 80); document.documentElement.style.setProperty("--side-menu-space", spaceForSideMenuSpread + "px"); if (buttonsHeight > maxButtonHeight * 2 && siteMenuPosition !== "full_menu") { site && site.setAttribute("menu-collapse", "true") } let collapseCheck = false; if (site) { switch (siteMenuPosition) { case "top_menu_fixed": if (linksWidth + identityWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "top_menu": if (linksWidth + identityWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "fix_menu": if (linksWidth + identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "fix_menu_bright": if (linksWidth + identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "middle_transparent_menu": if (linksWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "simple_menu": if (linksWidth > windowWidthNormalized || identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "center_logo_menu": if (linksWidth > windowWidthNormalized || identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break } } if (windowWidthNormalized < 600 || mobileCheck || collapseCheck) { if (siteMenuPosition !== "full_menu" && siteMenuPosition !== "transparent_menu") { site.setAttribute(attribute, "full_menu"); siteMenuPosition = "full_menu" } } else { if (!!site && !!Menu.originalMenuPosition) { site.setAttribute(attribute, Menu.originalMenuPosition); Menu.originalMenuPosition = null } } const stickTopSection = document.querySelector('section[data-position="stick-top"]'); if (stickTopSection && (windowWidthNormalized && (!Menu.prevWindowWidth && Menu.prevWindowWidth !== 0 || Menu.prevWindowWidth !== windowWidthNormalized))) { if (Menu.stickTopSectionHeightTimerID) { clearTimeout(Menu.stickTopSectionHeightTimerID) } updateStickTopSectionHeight(); Menu.stickTopSectionHeightTimerID = setTimeout(() => { updateStickTopSectionHeight() }, 200) } Menu.prevWindowWidth = windowWidthNormalized; menuTopInstance && document.documentElement.style.setProperty("--menu-height", menuTopInstance.clientHeight * -1 + "px"); const { totalButtonsWidth, actualButtonsWidth } = calcButtonsWidth(); if (totalButtonsWidth > actualButtonsWidth && siteMenuPosition === "full_menu") { site && site.setAttribute("menu-shrink", "true") } const initialLogoMobileAttr = site == null ? void 0 : site.getAttribute("data-menulogovisiblemobile"); if (initialLogoMobileAttr === "true" && siteMenuPosition === "full_menu") { let hamburger = document.querySelector(".top_menu .hamburger"); const hamburgerWidth = ifExistsWithDefault(hamburger, _hamburger => { var _a; let hamburgerWidth2 = 0; hamburgerWidth2 += _hamburger.scrollWidth; const hamburgerRight = parseInt((_a = window.getComputedStyle(_hamburger)) == null ? void 0 : _a.right); hamburgerWidth2 += window && hamburgerRight && !Number.isNaN(hamburgerRight) ? hamburgerRight : 0; return hamburgerWidth2 }, 0); const spaceAroundButtons = windowWidthNormalized - totalButtonsWidth; if (totalButtonsWidth > windowWidthNormalized - spaceAroundButtons / 2 - hamburgerWidth) { site && site.setAttribute("menu-shrink", "true") } } const menuButtonHeight = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.clientHeight, 0); const menuIconHeight = ifExistsWithDefault(document.querySelector(".top_menu .identity [data-elementtype=ICON]"), v => v.clientHeight, 0); document.documentElement.style.setProperty("--dynamic-buttons-height", menuButtonHeight + "px"); document.documentElement.style.setProperty("--dynamic-menu-logo-height", menuIconHeight + "px"); if (initialLogoMobileAttr) { setTimeout(() => { const topMenu = document == null ? void 0 : document.querySelector(".top_menu"); topMenu && document.documentElement.style.setProperty("--menu-height", topMenu.clientHeight * -1 + "px") }, 0) } setResizeHorizontal() }) } const calcButtonsWidth = () => { let button1Width = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON"]'), v => v.parentNode.scrollWidth, 0); let button2Width = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON2"]'), v => v.parentNode.scrollWidth, 0); let button3Width = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON3"]'), v => v.parentNode.scrollWidth, 0); let totalButtonsWidth = button1Width + button2Width + button3Width; let actualButtonsWidth = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.clientWidth, 0); return { button1Width, button2Width, button3Width, totalButtonsWidth, actualButtonsWidth } }; const updateStickTopSectionHeight = () => { var _a; const stickTopSection = document.querySelector('section[data-position="stick-top"]'); if (stickTopSection) { const height = (_a = stickTopSection == null ? void 0 : stickTopSection.getBoundingClientRect()) == null ? void 0 : _a.height; if (height || height === 0) { document.documentElement.style.setProperty("--stick-top-section-height", height + "px") } } }; window.menuCalculations = menuCalculations(); IMCEvents.registerEventOnce("resize", "menu-resizing", menuCalculations); Menu.detectMenuExpandClick = e => { if (e.target.classList.contains("menu-parent")) { if (e.target.parentElement.classList.contains("menu-closed")) { e.target.parentElement.classList.replace("menu-closed", "menu-open") } else if (e.target.parentElement.classList.contains("menu-open")) { e.target.parentElement.classList.replace("menu-open", "menu-closed") } } if (e.target.classList.contains("expand-icon")) { if (e.target.parentElement.parentElement.classList.contains("menu-closed")) { e.target.parentElement.parentElement.classList.replace("menu-closed", "menu-open") } else if (e.target.parentElement.parentElement.classList.contains("menu-open")) { e.target.parentElement.parentElement.classList.replace("menu-open", "menu-closed") } } }; Menu.init = () => { document.addEventListener("click", Menu.detectMenuExpandClick) }; window.Menu = Menu;
+	</script>
+	<script type="text/javascript">"use strict"; var __defProp = Object.defineProperty; var __defProps = Object.defineProperties; var __getOwnPropDescs = Object.getOwnPropertyDescriptors; var __getOwnPropSymbols = Object.getOwnPropertySymbols; var __hasOwnProp = Object.prototype.hasOwnProperty; var __propIsEnum = Object.prototype.propertyIsEnumerable; var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value; var __spreadValues = (a, b) => { for (var prop in b ||= {}) if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]); if (__getOwnPropSymbols) for (var prop of __getOwnPropSymbols(b)) { if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]) } return a }; var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b)); const Section = { localStorageKey: "", localStorageKeyProd: "", isFromEditor: false, localStorageData: {}, items: {} }; const positionAttribute = "data-position"; Section.init = (isFromEditor = true, isUpdate = false) => { var _a; Section.isFromEditor = isFromEditor; const websiteId = (_a = document.querySelector(".website")) == null ? void 0 : _a.getAttribute("id"); const uniqueSection = document.querySelectorAll("section[data-position]"); const pageId = getPageId(); Section.localStorageKey = websiteId ? `uniqueSection${isFromEditor ? "Editor" : ""}-${websiteId}` : ""; Section.localStorageKeyProd = websiteId ? `uniqueSection-${websiteId}` : ""; let localStorageItemParsed = {}; if (Section.localStorageKey) { const localStorageItemJson = localStorage.getItem(Section.localStorageKey); if (localStorageItemJson) { try { localStorageItemParsed = JSON.parse(localStorageItemJson) } catch (e) { localStorageItemParsed = {} } } } Section.localStorageData = localStorageItemParsed || {}; Section.items = localStorageItemParsed[pageId] || {}; uniqueSection.forEach(section => { const dataPosition = section.getAttribute(positionAttribute); if (dataPosition === "popup" || dataPosition === "stick-top") { initUniquePositionSection(section, dataPosition, isUpdate) } }) }; Section.destroy = pageVBID => { if (pageVBID && Section.items) { delete Section.items; saveToLocalStorage(pageVBID) } }; Section.clearSectionItem = (pageVBID, sectionVBID, type) => { var _a; if (Section.items && Section.items[type] && ((_a = Section.items[type]) == null ? void 0 : _a.sectionId) === sectionVBID) { if (type === "stick-top") { Section.updateStickTopSectionHeight(0) } delete Section.items[type]; saveToLocalStorage(pageVBID) } }; Section.updateStickTopSectionHeight = height => { if (height || height === 0) { setStickTopHeight(height) } }; Section.updatePopUpSection = () => { const popupSection = document.querySelector('section[data-position="popup"]'); if (popupSection) { const value = togglePopUpSection(popupSection); return value } return }; Section.updateSectionAppearanceSetting = (sectionId, appearanceValue = "always") => { var _a, _b; const pageId = getPageId(); const sectionElement = document.querySelector(`section[id='${sectionId}']`); const sectionPosition = sectionElement.getAttribute(positionAttribute); if (sectionPosition === "popup" || sectionPosition === "stick-top") { const currentAppearanceValue = (_b = (_a = Section.items[sectionPosition]) == null ? void 0 : _a.appearance) == null ? void 0 : _b.value; if (!currentAppearanceValue || currentAppearanceValue !== appearanceValue) { Section.items[sectionPosition].appearance = { value: appearanceValue, timeStamp: void 0, count: appearanceValue === "once" ? 0 : void 0 }; Section.items[sectionPosition].hidden = false; saveToLocalStorage(pageId); initUniquePositionSection(sectionElement, sectionPosition) } } }; Section.updatePageSectionsSelection = (sectionId, originalPosition, updatedPosition) => { var _a, _b; const pageId = getPageId(); const sectionElement = document.querySelector(`section[id='${sectionId}']`); if (originalPosition === "popup" && ((_a = Section.items.popup) == null ? void 0 : _a.sectionId) === sectionId) { const btn = sectionElement.getElementsByClassName("popup-section-close-btn"); sectionElement.removeChild(btn[0]); delete Section.items[originalPosition]; saveToLocalStorage(pageId) } else if (originalPosition === "stick-top" && ((_b = Section.items["stick-top"]) == null ? void 0 : _b.sectionId) === sectionId) { delete Section.items[originalPosition]; saveToLocalStorage(pageId); setStickTopHeight(0) } if (updatedPosition && updatedPosition !== "default") { Section.items = __spreadProps(__spreadValues({}, Section.items), { [updatedPosition]: { hidden: false, sectionId } }); saveToLocalStorage(pageId); if (updatedPosition === "stick-top") { setStickTopHeight(sectionElement == null ? void 0 : sectionElement.clientHeight) } } }; const getUtcDate = (date = new Date) => { const dateUtc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()); return dateUtc }; const saveToLocalStorage = (pageId, key = Section.localStorageKey) => { const sectionItems = __spreadValues(__spreadValues({}, Section.localStorageData), { [pageId]: Section.items }); const sectionItemsStr = JSON.stringify(sectionItems); localStorage.setItem(key, sectionItemsStr); if (Section.isFromEditor && Section.localStorageKeyProd) { localStorage.removeItem(Section.localStorageKeyProd) } }; const setStickTopHeight = height => { document.documentElement.style.setProperty("--stick-top-section-height", height + "px") }; const getSectionId = section => { const sectionId = section.getAttribute("id"); return sectionId }; const defaultPositionAppearance = sectionElement => { let sectionPopupAppearance = sectionElement.getAttribute("data-position-popup-appearance") || "always"; sectionPopupAppearance = sectionPopupAppearance === "always" || sectionPopupAppearance === "once" ? sectionPopupAppearance : Number(sectionPopupAppearance); const positionAppearanceObj = { value: sectionPopupAppearance, timeStamp: typeof sectionPopupAppearance === "number" ? getUtcDate() : void 0, count: sectionPopupAppearance === "once" ? 1 : void 0 }; return { appearance: positionAppearanceObj } }; const updateSectionPositionAppearance = (type, positionAppearanceObj, pageId, isUpdate) => { if (!Section.items[type].appearance) { Section.items[type] = __spreadValues(__spreadValues({}, Section.items[type]), positionAppearanceObj) } if (typeof Section.items[type].appearance.value === "number") { const currentUtcDate = getUtcDate(); if (!Section.items[type].appearance.timeStamp) { Section.items[type].appearance.timeStamp = currentUtcDate } const dif = currentUtcDate - (Section.items[type].appearance.timeStamp || 0); if (dif === 0 || dif !== currentUtcDate && dif >= Section.items[type].appearance.value * 36e5) { Section.items[type].appearance.timeStamp = getUtcDate(); Section.items[type].hidden = false } else { Section.items[type].hidden = true } } else if (Section.items[type].appearance.value === "once") { const prevCount = Section.items[type].appearance.count; Section.items[type].hidden = prevCount > 0; Section.items[type].appearance.count += 1 } else if (Section.items[type].appearance.value === "always" && !isUpdate) { Section.items[type].hidden = false } saveToLocalStorage(pageId) }; const initUniquePositionSection = (uniqueSection, type, isUpdate = false) => { var _a, _b; const pageId = getPageId(); const sectionId = getSectionId(uniqueSection); const sectionElement = document.querySelector(`section[id='${sectionId}']`); const positionAppearanceObj = defaultPositionAppearance(uniqueSection); if (!Section.items) { Section.items = { [type]: __spreadValues({ hidden: false, sectionId }, positionAppearanceObj) }; saveToLocalStorage(pageId) } else if (Section.items && (!Section.items[type] || ((_a = Section.items[type]) == null ? void 0 : _a.sectionId) !== sectionId)) { Section.items = __spreadProps(__spreadValues({}, Section.items), { [type]: __spreadValues({ hidden: false, sectionId }, positionAppearanceObj) }); saveToLocalStorage(pageId) } else if (Section.items && (Section.items[type] || ((_b = Section.items[type]) == null ? void 0 : _b.sectionId) === sectionId)) { updateSectionPositionAppearance(type, positionAppearanceObj, pageId, isUpdate) } if (type === "popup") { addCloseButton(uniqueSection) } else if (type === "stick-top") { setStickTopHeight(sectionElement == null ? void 0 : sectionElement.clientHeight) } if (Section.items[type].hidden) { sectionElement.classList.remove("show-section") } else { sectionElement.classList.add("show-section") } }; const getPageId = () => { const pageElement = document.querySelector(".page"); const pageId = pageElement.getAttribute("id"); return pageId }; const togglePopUpSection = popupSection => { var _a; const isDisplayNone = !((_a = popupSection == null ? void 0 : popupSection.classList) == null ? void 0 : _a.contains("show-section")); const pageId = getPageId(); if (isDisplayNone) { popupSection.classList.add("show-section"); Section.items["popup"].hidden = false } else { popupSection.classList.remove("show-section"); Section.items["popup"].hidden = true } saveToLocalStorage(pageId); return Section.items["popup"] }; const addCloseButton = popupSection => { let closeBtn = popupSection.querySelector(".popup-section-close-btn"); if (!closeBtn) { closeBtn = document.createElement("button"); closeBtn.classList.add("popup-section-close-btn"); closeBtn.onclick = function (e) { e.stopPropagation(); togglePopUpSection(popupSection) }; const closeBtnInner = document.createElement("div"); closeBtnInner.classList.add("popup-section-close-btn-inner"); closeBtn.appendChild(closeBtnInner); popupSection.appendChild(closeBtn) } }; window.Section = Section;
+	</script>
+	<script type="text/javascript">"use strict"; const Slideshow = { items: {} }; Slideshow.init = function ({ slideShowsSections = void 0, runFromEditor = false }) { if (document.readyState !== "complete") { window.addEventListener("load", () => { Slideshow.init({ slideShowsSections, runFromEditor }) }); return } if (slideShowsSections === void 0) { slideShowsSections = document.querySelectorAll("section[data-arranger='flex']") } let currentSlideShowsSectionsIds = {}; slideShowsSections.forEach(slideshow => { const slideshowId = slideshow.getAttribute("id"); const update = Slideshow.initSlideShowItem(slideshowId, slideshow, runFromEditor); currentSlideShowsSectionsIds[slideshowId] = slideshowId; slideshow.getAttribute("data-autoplay"); if (update) { const currentIndex = extractActiveDot(Slideshow.items[slideshowId].slideshow); if (currentIndex === -1) { Slideshow.showSlide({ slideShowData: Slideshow.items[slideshowId], runFromEditor }) } else { Slideshow.showSlide({ slideShowData: Slideshow.items[slideshowId], index: currentIndex, runFromEditor }) } } }); cleanup(currentSlideShowsSectionsIds) }; const cleanup = currentSlideShowsSectionsIds => { Object.keys(Slideshow.items).forEach(key => { if (key && !currentSlideShowsSectionsIds[key]) { if (Slideshow.items[key].reOrderObserver) { Slideshow.items[key].reOrderObserver.disconnect() } if (Slideshow.items[key].slideEffectObserver) { Slideshow.items[key].slideEffectObserver.disconnect() } delete Slideshow.items[key] } }) }; Slideshow.initSlideShowItem = function (slideshowId, slideshow, runFromEditor) { const slideEffectAnimation = querySelectSlideEffect(slideshow); const durationBetweenSlides = parseInt(slideshow.getAttribute("data-durationbetweenslides")) || 4; const doAutoplay = slideshow.getAttribute("data-autoplay") === "autoplay"; const pagination = generatePagination(slideshow, slideshowId); const arrowsColor = slideshow.getAttribute("data-arranger-arrows-color"); const arrows = slideshow.getAttribute("data-arranger-arrows-position"); let allSlides = querySelectSlides(slideshow); let sectionChildrenElement = slideshow.querySelector(".section-children"); Slideshow.items[slideshowId] = { slideEffectObserver: void 0, reOrderObserver: void 0, timeOutId: void 0, activeSlideIndex: void 0, prevActiveSlideIndex: void 0, isAutoPlay: !!(!runFromEditor && doAutoplay), animationDuration: durationBetweenSlides === 1 ? 500 : 1e3, slideshow, sectionChildrenElement, slideEffectAnimation, durationBetweenSlides, slides: allSlides, arrowsColor: arrowsColor || "255,255,255", arrows: arrows || "none" }; const slideArrows = generateSlideArrows(slideshow, Slideshow.items[slideshowId], runFromEditor); slideshow.style.setProperty("--slideshow-arrows-color", arrowsColor ? arrowsColor : "255,255,255"); addSlideEffectChangeObservable({ slideShowData: Slideshow.items[slideshowId], runFromEditor }); if (sectionChildrenElement) { addSectionChildrenElementObservable({ slideShowData: Slideshow.items[slideshowId], runFromEditor }) } let reUpdateSlides = false; if (allSlides.length > 1) { if (pagination) { Slideshow.items[slideshowId].slides.forEach((slide, index) => { let slideDot = generateSlideDot({ slideIndex: index, slideShowData: Slideshow.items[slideshowId], runFromEditor }); pagination.appendChild(slideDot) }); slideshow.appendChild(pagination); reUpdateSlides = true } let slideshowChildren = slideshow.querySelector(".children"); if (slideArrows && slideshowChildren && (arrows === "overlay" || arrows === "outside")) { slideshowChildren.appendChild(slideArrows); reUpdateSlides = true } } return reUpdateSlides }; Slideshow.showSlide = function ({ slideShowData, index, runFromEditor }) { slideShowData.slideEffectAnimation = querySelectSlideEffect(slideShowData.slideshow) || slideShowData.slideEffectAnimation; const { slideshow, slideEffectAnimation, slides, isAutoPlay } = slideShowData; if (index === void 0) { let activeDotIndex = extractActiveDot(slideshow); slideShowData.prevActiveSlideIndex = activeDotIndex; slideShowData.activeSlideIndex = getNextSlideIndex(activeDotIndex, slides) } else { slideShowData.prevActiveSlideIndex = slideShowData.activeSlideIndex; slideShowData.activeSlideIndex = index } let hasVisibleSlide = false; slides.forEach((slide, slideIndex) => { if (slideEffectAnimation) { slide.classList.add(slideEffectAnimation + "-animation"); if (slideEffectAnimation === "fade") { removeSlideAnimation(slideShowData, slideIndex); removeNoneAnimation(slideShowData, slideIndex); if (slide.classList.contains("prev-visible-slide")) { slide.classList.remove("prev-visible-slide"); slide.style.animationDuration = null } if (slide.classList.contains("visible-slide")) { hasVisibleSlide = true; slide.classList.remove("visible-slide"); slide.classList.add("prev-visible-slide"); slide.style.animationDuration = `${slideShowData.animationDuration}ms` } } if (slideEffectAnimation === "slide" || slideEffectAnimation === "none") { slide.style.animationDuration = null; removeFadeAnimation(slideShowData, slideIndex); if (slideEffectAnimation === "none") { removeSlideAnimation(slideShowData, index) } else { removeNoneAnimation(slideShowData, index) } slide.style.transform = "translateX(" + 100 * (0 - slideShowData.activeSlideIndex) + "%)" } } }); if (slideEffectAnimation === "fade") { if (hasVisibleSlide) { slides[slideShowData.activeSlideIndex].style.animationDuration = `${slideShowData.animationDuration}ms` } slides[slideShowData.activeSlideIndex].classList.add("visible-slide") } setActivePaginationDot({ slideshow, activeSlideIndex: slideShowData.activeSlideIndex }); if (isAutoPlay) { autoPlay(slideShowData, runFromEditor) } }; Slideshow.clearSlideShowFromSection = slideshowId => { var _a; const slideshowSection = document.querySelector(`section[id='${slideshowId}']`); if (slideshowSection) { const pagination = slideshowSection.querySelector(".pagination"); if (pagination) { slideshowSection.removeChild(pagination) } const slideshowArrows = slideshowSection.querySelector(".slide-arrows"); if (slideshowArrows) { (_a = slideshowSection.querySelector(".children")) == null ? void 0 : _a.removeChild(slideshowArrows) } } }; Slideshow.updateArrowsColor = (slideshowId, arrowsColor) => { const slideshowSection = document.querySelector(`section[id='${slideshowId}']`); slideshowSection.style.setProperty("--slideshow-arrows-color", arrowsColor) }; const extractActiveDot = slideshow => { let activeDot = slideshow.querySelector(".slide-dot.active"); let activeDotIndex = [...slideshow.querySelectorAll(".slide-dot")].indexOf(activeDot); return activeDotIndex }; const addSectionChildrenElementObservable = ({ slideShowData, runFromEditor }) => { var _a, _b; if (slideShowData.reOrderObserver) { slideShowData.reOrderObserver.disconnect() } if (runFromEditor) { slideShowData.sectionChildrenElement = ((_a = slideShowData == null ? void 0 : slideShowData.slideshow) == null ? void 0 : _a.querySelector(".section-children")) || slideShowData.sectionChildrenElement; slideShowData.reOrderObserver = new MutationObserver(mutationList => { var _a2; for (const mutation of mutationList) { if (mutation.type !== "childList") { return } const activeSlideIndex = getActiveSlideIndex(slideShowData); slideShowData.slides = querySelectSlides(slideShowData.slideshow) || slideShowData.slides; slideShowData.slides.forEach((slide, index) => { removeSlideAnimation(slideShowData, index); removeFadeAnimation(slideShowData, index); slide.classList.add("none-animation"); slide.style.transform = "translateX(" + 100 * (0 - activeSlideIndex) + "%)" }); if (slideShowData.slideEffectAnimation === "fade") { (_a2 = slideShowData.slides[activeSlideIndex]) == null ? void 0 : _a2.classList.add("visible-slide") } } }); (_b = slideShowData.reOrderObserver) == null ? void 0 : _b.observe(slideShowData.sectionChildrenElement, { childList: true }) } }; const addSlideEffectChangeObservable = ({ slideShowData, runFromEditor }) => { var _a; if (slideShowData.slideEffectObserver) { slideShowData.slideEffectObserver.disconnect() } if (runFromEditor) { slideShowData.slideEffectObserver = new MutationObserver(mutationList => { var _a2; for (const mutation of mutationList) { if (mutation.type !== "attributes" && mutation.attributeName !== "data-slide-effect") { return } const originalSlideEffect = slideShowData.slideEffectAnimation; const updatedSlideEffectAnimation = querySelectSlideEffect(slideShowData.slideshow); if (originalSlideEffect !== updatedSlideEffectAnimation) { slideShowData.slideEffectAnimation = updatedSlideEffectAnimation; const activeSlideIndex = getActiveSlideIndex(slideShowData); if (updatedSlideEffectAnimation === "fade") { (_a2 = slideShowData.slides[activeSlideIndex]) == null ? void 0 : _a2.classList.add("visible-slide") } else { slideShowData.slides.forEach((slide, index) => { removeSlideAnimation(slideShowData, index); removeFadeAnimation(slideShowData, index); slide.classList.add("none-animation"); slide.style.transform = "translateX(" + 100 * (0 - activeSlideIndex) + "%)" }) } } } }); (_a = slideShowData.slideEffectObserver) == null ? void 0 : _a.observe(slideShowData.slideshow, { attributes: true }) } }; const getActiveSlideIndex = slideShowData => { let activeDotIndex = slideShowData.activeSlideIndex; if (slideShowData.activeSlideIndex !== 0 && !slideShowData.activeSlideIndex) { activeDotIndex = extractActiveDot(slideShowData.slideshow) } return activeDotIndex >= 0 ? activeDotIndex : 0 }; const removeClassFromSlide = (slideShowData, index, classList = []) => { var _a; (_a = slideShowData == null ? void 0 : slideShowData.slides[index]) == null ? void 0 : _a.classList.remove(...classList) }; const removeSlideAnimation = (slideShowData, index) => { removeClassFromSlide(slideShowData, index, ["slide-animation"]) }; const removeNoneAnimation = (slideShowData, index) => { removeClassFromSlide(slideShowData, index, ["none-animation"]) }; const removeFadeAnimation = (slideShowData, index) => { removeClassFromSlide(slideShowData, index, ["fade-animation", "visible-slide", "prev-visible-slide"]) }; const querySelectSlides = slideshow => { const sectionChildren = slideshow.querySelector(".section-children"); return sectionChildren.querySelectorAll(":scope > article") }; const querySelectSlideEffect = slideshow => { const slideEffect = slideshow.getAttribute("data-slide-effect"); const slideEffectAnimation = slideEffect ? slideEffect == null ? void 0 : slideEffect.toLowerCase() : "slide"; return slideEffectAnimation }; const autoPlay = (slideShowData, runFromEditor) => { const { durationBetweenSlides } = slideShowData; clearAutorunTimeout(slideShowData); slideShowData.timeOutId = setTimeout(() => { Slideshow.showSlide({ slideShowData, runFromEditor }) }, durationBetweenSlides * 1e3) }; const generatePagination = (slideshow, slideshowId) => { let pagination = slideshow.querySelector(".pagination"); const sectionChildren = slideshow.querySelector(".section-children"); if (!!pagination) { if (pagination.querySelectorAll(".slide-dot").length === sectionChildren.querySelectorAll(":scope > article").length) { return false } slideshow.removeChild(pagination) } pagination = document.createElement("div"); pagination.classList.add("pagination"); return pagination }; const generateSlideDot = ({ slideIndex, slideShowData, runFromEditor }) => { let slideDot = document.createElement("div"); slideDot.classList.add("slide-dot"); slideDot.setAttribute("data-slide", slideIndex); slideDot.onclick = function (e) { e.stopPropagation(); const clickedSlideIndex = parseInt(this.getAttribute("data-slide")); clearAutorunTimeout(slideShowData); if ((clickedSlideIndex || clickedSlideIndex === 0) && (slideShowData == null ? void 0 : slideShowData.activeSlideIndex) === clickedSlideIndex) { return } slideShowData.isAutoPlay = false; Slideshow.showSlide({ index: clickedSlideIndex, slideShowData, runFromEditor }) }; return slideDot }; const generateSlideArrows = (slideshowSection, slideShowData, runFromEditor) => { const arrowOnClick = arrowSide => { return e => { var _a; e.preventDefault(); e.stopPropagation(); const totalSlides = (_a = slideShowData == null ? void 0 : slideShowData.slides) == null ? void 0 : _a.length; if (totalSlides && Number.isInteger(totalSlides) && totalSlides > 1) { const activeSlideIndex = getActiveSlideIndex(slideShowData); let nextIndex = 0; if (arrowSide === "left") { nextIndex = getPrevSlideIndex(activeSlideIndex, slideShowData.slides) } else if (arrowSide === "right") { nextIndex = getNextSlideIndex(activeSlideIndex, slideShowData.slides) } Slideshow.showSlide({ index: nextIndex, slideShowData, runFromEditor }) } } }; let slideshowArrows = slideshowSection == null ? void 0 : slideshowSection.querySelector(".slide-arrows"); const slideshowSectionChildren = slideshowSection == null ? void 0 : slideshowSection.querySelector(".section-children"); if (!!slideshowArrows) { if (slideshowSectionChildren.querySelectorAll(":scope > article").length > 1) { return false } slideshowSection.querySelector(".children").removeChild(slideshowArrows) } let slideArrows = document.createElement("div"); slideArrows.classList.add("slide-arrows"); let slideLeftArrow = document.createElement("button"); slideLeftArrow.classList.add("left-arrow"); slideLeftArrow.onclick = arrowOnClick("left"); slideLeftArrow.appendChild(window.createArrowSvg()); let slideRightArrow = document.createElement("button"); slideRightArrow.classList.add("right-arrow"); slideRightArrow.onclick = arrowOnClick("right"); slideRightArrow.appendChild(window.createArrowSvg()); slideArrows.append(slideLeftArrow, slideRightArrow); return slideArrows }; const clearAutorunTimeout = slideShowData => { if (slideShowData == null ? void 0 : slideShowData.timeOutId) { clearTimeout(slideShowData.timeOutId); slideShowData.timeOutId = void 0 } }; const getNextSlideIndex = (currentIndex, list = []) => { return currentIndex + 1 > list.length - 1 ? 0 : currentIndex + 1 }; const getPrevSlideIndex = (currentIndex, list = []) => { return currentIndex - 1 < 0 ? list.length - 1 : currentIndex - 1 }; const setActivePaginationDot = ({ slideshow, activeSlideIndex }) => { const hasPagination = !!slideshow.querySelector(".pagination"); if (hasPagination) { let activeDot = slideshow.querySelector(".slide-dot.active"); const hasActiveDot = !!activeDot; if (hasActiveDot) { activeDot.classList.remove("active") } slideshow.querySelectorAll(".slide-dot")[activeSlideIndex].classList.add("active") } }; window.Slideshow = Slideshow;
+	</script>
+	<script type="text/javascript">"use strict"; const Pagination = {}; Pagination.init = function (sections, forceClear) { if (section === void 0) { sections = document.querySelectorAll("section[data-arranger='matrix']") } for (var idx = 0; idx < sections.length; idx++) { var section = sections[idx]; Pagination.initPagination(section, forceClear) } }; Pagination.initPagination = function (section, forceClear) { let pagination = section.getAttribute("data-pagination"); let paginationvariant = section.getAttribute("data-paginationvariant"); let paginationbuttontext = section.getAttribute("data-paginationbuttontext"); let paginationtype = section.getAttribute("data-paginationtype"); let paginationvisiblelines = parseInt(section.getAttribute("data-paginationvisiblelines")); let arrangerCols = parseInt(section.getAttribute("data-arrangergallerycols")); let arrangerGallerySpacing = parseInt(section.getAttribute("data-arrangergalleryspacing")); let articles = Array.from(section.querySelectorAll("article")); let container = section.querySelector(".gallery-pagination"); let childrenContainer = section.querySelector(".section-children"); if (forceClear && !!container && !!container.parentNode) { container.parentNode.removeChild(container); container = null } if (!pagination && !!container) { section.removeChild(container); return false } else if (!container) { container = document.createElement("div"); childrenContainer.appendChild(container); container.classList.add("gallery-pagination") } if (!!container && !!articles && pagination === "break" && paginationtype === "show_more_button") { var showMoreButton = container.querySelector(".pagination-more-button"); if (articles.filter(article => article.classList.contains("hidden")).length > 0) { if (!showMoreButton) { showMoreButton = document.createElement("div"); showMoreButton.classList.add("pagination-more-button"); showMoreButton.classList.add(paginationvariant); showMoreButton.innerText = paginationbuttontext; showMoreButton.onclick = function (e) { e.stopPropagation(); var hiddenItems = articles.filter(article => article.classList.contains("hidden")); hiddenItems.slice(0, paginationvisiblelines * arrangerCols).map(_ => _.classList.remove("hidden")); if (articles.filter(article => article.classList.contains("hidden")).length === 0) { container.removeChild(showMoreButton) } }; container.appendChild(showMoreButton) } showMoreButton.style.left = "-" + (arrangerGallerySpacing || 0) / 2 + "px" } else { if (!!container && !!showMoreButton) { container.removeChild(showMoreButton) } } } }; window.Pagination = Pagination;
+	</script>
+	<script type="text/javascript">"use strict";/*! odometer 0.4.6 */(function () { var a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G = [].slice; q = '<span class="odometer-value"></span>', n = '<span class="odometer-ribbon"><span class="odometer-ribbon-inner">' + q + "</span></span>", d = '<span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner">' + n + "</span></span>", g = '<span class="odometer-formatting-mark"></span>', c = "(,ddd).dd", h = /^\(?([^)]*)\)?(?:(.)(d+))?$/, i = 30, f = 2e3, a = 20, j = 2, e = .5, k = 1e3 / i, b = 1e3 / a, o = "transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd", y = document.createElement("div").style, p = null != y.transition || null != y.webkitTransition || null != y.mozTransition || null != y.oTransition, w = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, l = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver, s = function (a2) { var b2; return b2 = document.createElement("div"), b2.innerHTML = a2, b2.children[0] }, v = function (a2, b2) { return a2.className = a2.className.replace(new RegExp("(^| )" + b2.split(" ").join("|") + "( |$)", "gi"), " ") }, r = function (a2, b2) { return v(a2, b2), a2.className += " " + b2 }, z = function (a2, b2) { var c2; return null != document.createEvent ? (c2 = document.createEvent("HTMLEvents"), c2.initEvent(b2, true, true), a2.dispatchEvent(c2)) : void 0 }, u = function () { var a2, b2; return null != (a2 = null != (b2 = window.performance) ? "function" == typeof b2.now ? b2.now() : void 0 : void 0) ? a2 : +new Date }, x = function (a2, b2) { return null == b2 && (b2 = 0), b2 ? (a2 *= Math.pow(10, b2), a2 += .5, a2 = Math.floor(a2), a2 /= Math.pow(10, b2)) : Math.round(a2) }, A = function (a2) { return 0 > a2 ? Math.ceil(a2) : Math.floor(a2) }, t = function (a2) { return a2 - x(a2) }, C = false, (B = function () { var a2, b2, c2, d2, e2; if (!C && null != window.jQuery) { for (C = true, d2 = ["html", "text"], e2 = [], b2 = 0, c2 = d2.length; c2 > b2; b2++)a2 = d2[b2], e2.push(function (a3) { var b3; return b3 = window.jQuery.fn[a3], window.jQuery.fn[a3] = function (a4) { var c3; return null == a4 || null == (null != (c3 = this[0]) ? c3.odometer : void 0) ? b3.apply(this, arguments) : this[0].odometer.update(a4) } }(a2)); return e2 } })(), setTimeout(B, 0), m = function () { function a2(b2) { var c2, d2, e2, g2, h2, i2, l2, m2, n2, o2, p2 = this; if (this.options = b2, this.el = this.options.el, null != this.el.odometer) return this.el.odometer; this.el.odometer = this, m2 = a2.options; for (d2 in m2) g2 = m2[d2], null == this.options[d2] && (this.options[d2] = g2); null == (h2 = this.options).duration && (h2.duration = f), this.MAX_VALUES = this.options.duration / k / j | 0, this.resetFormat(), this.value = this.cleanValue(null != (n2 = this.options.value) ? n2 : ""), this.renderInside(), this.render(); try { for (o2 = ["innerHTML", "innerText", "textContent"], i2 = 0, l2 = o2.length; l2 > i2; i2++)e2 = o2[i2], null != this.el[e2] && !function (a3) { return Object.defineProperty(p2.el, a3, { get: function () { var b3; return "innerHTML" === a3 ? p2.inside.outerHTML : null != (b3 = p2.inside.innerText) ? b3 : p2.inside.textContent }, set: function (a4) { return p2.update(a4) } }) }(e2) } catch (q2) { c2 = q2, this.watchForMutations() } } return a2.prototype.renderInside = function () { return this.inside = document.createElement("div"), this.inside.className = "odometer-inside", this.el.innerHTML = "", this.el.appendChild(this.inside) }, a2.prototype.watchForMutations = function () { var a3, b2 = this; if (null != l) try { return null == this.observer && (this.observer = new l(function () { var a4; return a4 = b2.el.innerText, b2.renderInside(), b2.render(b2.value), b2.update(a4) })), this.watchMutations = true, this.startWatchingMutations() } catch (c2) { a3 = c2 } }, a2.prototype.startWatchingMutations = function () { return this.watchMutations ? this.observer.observe(this.el, { childList: true }) : void 0 }, a2.prototype.stopWatchingMutations = function () { var a3; return null != (a3 = this.observer) ? a3.disconnect() : void 0 }, a2.prototype.cleanValue = function (a3) { var b2; return "string" == typeof a3 && (a3 = a3.replace(null != (b2 = this.format.radix) ? b2 : ".", "<radix>"), a3 = a3.replace(/[.,]/g, ""), a3 = a3.replace("<radix>", "."), a3 = parseFloat(a3, 10) || 0), x(a3, this.format.precision) }, a2.prototype.bindTransitionEnd = function () { var a3, b2, c2, d2, e2, f2, g2 = this; if (!this.transitionEndBound) { for (this.transitionEndBound = true, b2 = false, e2 = o.split(" "), f2 = [], c2 = 0, d2 = e2.length; d2 > c2; c2++)a3 = e2[c2], f2.push(this.el.addEventListener(a3, function () { return b2 ? true : (b2 = true, setTimeout(function () { return g2.render(), b2 = false, z(g2.el, "odometerdone") }, 0), true) }, false)); return f2 } }, a2.prototype.resetFormat = function () { var a3, b2, d2, e2, f2, g2, i2, j2; if (a3 = null != (i2 = this.options.format) ? i2 : c, a3 || (a3 = "d"), d2 = h.exec(a3), !d2) throw new Error("Odometer: Unparsable digit format"); return j2 = d2.slice(1, 4), g2 = j2[0], f2 = j2[1], b2 = j2[2], e2 = (null != b2 ? b2.length : void 0) || 0, this.format = { repeating: g2, radix: f2, precision: e2 } }, a2.prototype.render = function (a3) { var b2, c2, d2, e2, f2, g2, h2, i2, j2, k2, l2, m2; for (null == a3 && (a3 = this.value), this.stopWatchingMutations(), this.resetFormat(), this.inside.innerHTML = "", g2 = this.options.theme, b2 = this.el.className.split(" "), f2 = [], i2 = 0, k2 = b2.length; k2 > i2; i2++)c2 = b2[i2], c2.length && ((e2 = /^odometer-theme-(.+)$/.exec(c2)) ? g2 = e2[1] : /^odometer(-|$)/.test(c2) || f2.push(c2)); for (f2.push("odometer"), p || f2.push("odometer-no-transitions"), f2.push(g2 ? "odometer-theme-" + g2 : "odometer-auto-theme"), this.el.className = f2.join(" "), this.ribbons = {}, this.digits = [], h2 = !this.format.precision || !t(a3) || false, m2 = a3.toString().split("").reverse(), j2 = 0, l2 = m2.length; l2 > j2; j2++)d2 = m2[j2], "." === d2 && (h2 = true), this.addDigit(d2, h2); return this.startWatchingMutations() }, a2.prototype.update = function (a3) { var b2, c2 = this; return a3 = this.cleanValue(a3), (b2 = a3 - this.value) ? (v(this.el, "odometer-animating-up odometer-animating-down odometer-animating"), b2 > 0 ? r(this.el, "odometer-animating-up") : r(this.el, "odometer-animating-down"), this.stopWatchingMutations(), this.animate(a3), this.startWatchingMutations(), setTimeout(function () { return c2.el.offsetHeight, r(c2.el, "odometer-animating") }, 0), this.value = a3) : void 0 }, a2.prototype.renderDigit = function () { return s(d) }, a2.prototype.insertDigit = function (a3, b2) { return null != b2 ? this.inside.insertBefore(a3, b2) : this.inside.children.length ? this.inside.insertBefore(a3, this.inside.children[0]) : this.inside.appendChild(a3) }, a2.prototype.addSpacer = function (a3, b2, c2) { var d2; return d2 = s(g), d2.innerHTML = a3, c2 && r(d2, c2), this.insertDigit(d2, b2) }, a2.prototype.addDigit = function (a3, b2) { var c2, d2, e2, f2; if (null == b2 && (b2 = true), "-" === a3) return this.addSpacer(a3, null, "odometer-negation-mark"); if ("." === a3) return this.addSpacer(null != (f2 = this.format.radix) ? f2 : ".", null, "odometer-radix-mark"); if (b2) for (e2 = false; ;) { if (!this.format.repeating.length) { if (e2) throw new Error("Bad odometer format without digits"); this.resetFormat(), e2 = true } if (c2 = this.format.repeating[this.format.repeating.length - 1], this.format.repeating = this.format.repeating.substring(0, this.format.repeating.length - 1), "d" === c2) break; this.addSpacer(c2) } return d2 = this.renderDigit(), d2.querySelector(".odometer-value").innerHTML = a3, this.digits.push(d2), this.insertDigit(d2) }, a2.prototype.animate = function (a3) { return p && "count" !== this.options.animation ? this.animateSlide(a3) : this.animateCount(a3) }, a2.prototype.animateCount = function (a3) { var c2, d2, e2, f2, g2, h2 = this; if (d2 = +a3 - this.value) return f2 = e2 = u(), c2 = this.value, (g2 = function () { var i2, j2, k2; return u() - f2 > h2.options.duration ? (h2.value = a3, h2.render(), void z(h2.el, "odometerdone")) : (i2 = u() - e2, i2 > b && (e2 = u(), k2 = i2 / h2.options.duration, j2 = d2 * k2, c2 += j2, h2.render(Math.round(c2))), null != w ? w(g2) : setTimeout(g2, b)) })() }, a2.prototype.getDigitCount = function () { var a3, b2, c2, d2, e2, f2; for (d2 = 1 <= arguments.length ? G.call(arguments, 0) : [], a3 = e2 = 0, f2 = d2.length; f2 > e2; a3 = ++e2)c2 = d2[a3], d2[a3] = Math.abs(c2); return b2 = Math.max.apply(Math, d2), Math.ceil(Math.log(b2 + 1) / Math.log(10)) }, a2.prototype.getFractionalDigitCount = function () { var a3, b2, c2, d2, e2, f2, g2; for (e2 = 1 <= arguments.length ? G.call(arguments, 0) : [], b2 = /^\-?\d*\.(\d*?)0*$/, a3 = f2 = 0, g2 = e2.length; g2 > f2; a3 = ++f2)d2 = e2[a3], e2[a3] = d2.toString(), c2 = b2.exec(e2[a3]), e2[a3] = null == c2 ? 0 : c2[1].length; return Math.max.apply(Math, e2) }, a2.prototype.resetDigits = function () { return this.digits = [], this.ribbons = [], this.inside.innerHTML = "", this.resetFormat() }, a2.prototype.animateSlide = function (a3) { var b2, c2, d2, f2, g2, h2, i2, j2, k2, l2, m2, n2, o2, p2, q2, s2, t2, u2, v2, w2, x2, y2, z2, B2, C2, D2, E2; if (s2 = this.value, j2 = this.getFractionalDigitCount(s2, a3), j2 && (a3 *= Math.pow(10, j2), s2 *= Math.pow(10, j2)), d2 = a3 - s2) { for (this.bindTransitionEnd(), f2 = this.getDigitCount(s2, a3), g2 = [], b2 = 0, m2 = v2 = 0; f2 >= 0 ? f2 > v2 : v2 > f2; m2 = f2 >= 0 ? ++v2 : --v2) { if (t2 = A(s2 / Math.pow(10, f2 - m2 - 1)), i2 = A(a3 / Math.pow(10, f2 - m2 - 1)), h2 = i2 - t2, Math.abs(h2) > this.MAX_VALUES) { for (l2 = [], n2 = h2 / (this.MAX_VALUES + this.MAX_VALUES * b2 * e), c2 = t2; h2 > 0 && i2 > c2 || 0 > h2 && c2 > i2;)l2.push(Math.round(c2)), c2 += n2; l2[l2.length - 1] !== i2 && l2.push(i2), b2++ } else l2 = function () { E2 = []; for (var a4 = t2; i2 >= t2 ? i2 >= a4 : a4 >= i2; i2 >= t2 ? a4++ : a4--)E2.push(a4); return E2 }.apply(this); for (m2 = w2 = 0, y2 = l2.length; y2 > w2; m2 = ++w2)k2 = l2[m2], l2[m2] = Math.abs(k2 % 10); g2.push(l2) } for (this.resetDigits(), D2 = g2.reverse(), m2 = x2 = 0, z2 = D2.length; z2 > x2; m2 = ++x2)for (l2 = D2[m2], this.digits[m2] || this.addDigit(" ", m2 >= j2), null == (u2 = this.ribbons)[m2] && (u2[m2] = this.digits[m2].querySelector(".odometer-ribbon-inner")), this.ribbons[m2].innerHTML = "", 0 > d2 && (l2 = l2.reverse()), o2 = C2 = 0, B2 = l2.length; B2 > C2; o2 = ++C2)k2 = l2[o2], q2 = document.createElement("div"), q2.className = "odometer-value", q2.innerHTML = k2, this.ribbons[m2].appendChild(q2), o2 === l2.length - 1 && r(q2, "odometer-last-value"), 0 === o2 && r(q2, "odometer-first-value"); return 0 > t2 && this.addDigit("-"), p2 = this.inside.querySelector(".odometer-radix-mark"), null != p2 && p2.parent.removeChild(p2), j2 ? this.addSpacer(this.format.radix, this.digits[j2 - 1], "odometer-radix-mark") : void 0 } }, a2 }(), m.options = null != (E = window.odometerOptions) ? E : {}, setTimeout(function () { var a2, b2, c2, d2, e2; if (window.odometerOptions) { d2 = window.odometerOptions, e2 = []; for (a2 in d2) b2 = d2[a2], e2.push(null != (c2 = m.options)[a2] ? (c2 = m.options)[a2] : c2[a2] = b2); return e2 } }, 0), m.init = function () { var a2, b2, c2, d2, e2, f2; if (null != document.querySelectorAll) { for (b2 = document.querySelectorAll(m.options.selector || ".odometer"), f2 = [], c2 = 0, d2 = b2.length; d2 > c2; c2++)a2 = b2[c2], f2.push(a2.odometer = new m({ el: a2, value: null != (e2 = a2.innerText) ? e2 : a2.textContent })); return f2 } }, null != (null != (F = document.documentElement) ? F.doScroll : void 0) && null != document.createEventObject ? (D = document.onreadystatechange, document.onreadystatechange = function () { return "complete" === document.readyState && m.options.auto !== false && m.init(), null != D ? D.apply(this, arguments) : void 0 }) : document.addEventListener("DOMContentLoaded", function () { return m.options.auto !== false ? m.init() : void 0 }, false), "function" == typeof define && define.amd ? define(["jquery"], function () { return m }) : typeof exports === false ? module.exports = m : window.Odometer = m }).call(this);
+	</script>
+
+
+
+	<script type="text/javascript">"use strict"; const Anchor = { sessionStorageKey: "SCROLL_TO_SECTION_OP_PAGE_LOAD" }; const handleAnchorClick = (sectionId, pageId, href, position) => { const currentPage = document.querySelector("div.page"); const currentPageId = (currentPage == null ? void 0 : currentPage.getAttribute("id")) || ""; if (`/${currentPageId}` === pageId) { if (sectionId) { closeMobileMenu(); const scrollToSection = document == null ? void 0 : document.querySelector(`section[id='${sectionId}']`); scrollToSection.style.scrollMarginTop = "calc(var(--menu-height) * -1 + var(--stick-top-section-height))"; scrollToSection.style.overflow = "initial"; scrollToSection == null ? void 0 : scrollToSection.scrollIntoView({ behavior: "smooth", block: position || "nearest", inline: "nearest" }) } } else { sessionStorage.setItem(Anchor.sessionStorageKey, JSON.stringify({ sectionId, pageId, href, position })); if (window == null ? void 0 : window.location) { window.location.href = `${href}` } } }; const closeMobileMenu = () => { var _a, _b; const websiteRoot = document.querySelector(".website"); const isShowMenu = (_a = websiteRoot == null ? void 0 : websiteRoot.classList) == null ? void 0 : _a.contains("show-menu"); if (isShowMenu) { (_b = websiteRoot.classList) == null ? void 0 : _b.remove("show-menu") } }; const addAnchorToElement = () => { const anchorElement = document.querySelectorAll('[data-item-type="ANCHOR"]'); if (anchorElement) { anchorElement.forEach(element => { const scrollToSectionId = element.getAttribute("data-section-id"); const scrollToSectionPageId = element.getAttribute("data-page-id"); const scrollToSectionHref = element.getAttribute("data-item-href"); const scrollToSectionPosition = element.getAttribute("data-section-position"); if (scrollToSectionId) { element.onclick = function (event) { event.preventDefault(); handleAnchorClick(scrollToSectionId, scrollToSectionPageId, scrollToSectionHref, scrollToSectionPosition) } } }) } const scrollToData = sessionStorage.getItem(Anchor.sessionStorageKey); sessionStorage.removeItem(Anchor.sessionStorageKey); if (scrollToData) { const data = JSON.parse(scrollToData); if (data.sectionId && data.pageId && data.href && data.position) { handleAnchorClick(data.sectionId, data.pageId, data.href, data.position) } } }; Anchor.init = () => { addAnchorToElement() }; window.Anchor = Anchor;
+	</script>
+	<script>
+		const addScriptAtBottom = (src) => {
+			const script = document.createElement('script');
+
+			script.type = 'text/javascript';
+			script.src = src;
+			script.defer = true;
+			document.body.appendChild(script);
+		};
+
+		window.addScriptAtBottom = addScriptAtBottom;
+
+		// lazy image loading
+		window.onload = function () {
+
+			Effects.init();
+			Clamping.init();
+			Slideshow.init({ slideShowsSections: undefined, runFromEditor: false });
+			Pagination.init();
+			Section.init(false)
+			Menu.init();
+
+			Anchor.init();
+
+			let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+			if ("IntersectionObserver" in window) {
+				let lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+					entries.forEach(function (video) {
+						if (video.isIntersecting) {
+							for (var source in video.target.children) {
+								let videoSource = video.target.children[source];
+								if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+									videoSource.src = videoSource.dataset.src;
+								}
+							}
+
+							video.target.load();
+							video.target.classList.remove("lazy");
+							if (video.target.autoplay) {
+								video.target.play();
+							}
+							lazyVideoObserver.unobserve(video.target);
+						}
+					});
+				});
+
+				lazyVideos.forEach(function (lazyVideo) {
+					lazyVideoObserver.observe(lazyVideo);
+				});
+			} else {
+				// Possibly fall back to a more compatible method here
+			}
+
+			const loopVideos = [].slice.call(document.querySelectorAll('video[loop]'));
+			loopVideos.map(videoEl => {
+				videoEl.addEventListener('timeupdate', (event) => {
+					if (event.target.duration - event.target.currentTime < 0.5) {
+						event.target.load();
+					}
+				});
+			})
+		}
+		// lazy image loading END
+		// custom mapped event trigger START
+		window.triggerCustomEvent = function (callParameter, itemData) {
+			window.dispatchEvent(new CustomEvent('actionCall', { detail: { callParameter: callParameter, itemData: itemData } }));
+		}
+						// custom mapped event trigger  END
+	</script>
+
+</head>
+
+<body>
+
+	<div class="website" id="vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published-PAGES" data-cloaking="false"
+		data-menuposition="top_menu_fixed" data-footerposition="horizontal_footer" data-menulogovisiblemobile="false">
+
+		<style>
+			:root {
+				--theme-color-1: rgb(43, 44, 46);
+				--theme-color-1-rgbv: 255, 255, 255;
+				--theme-color-btn-rgbv: 34, 196, 205;
+				--theme-color-1-dark: rgb(34, 35, 36);
+				--theme-color-1-dark-rgbv: 255, 255, 255;
+				--theme-color-1-light: rgb(85, 86, 87);
+				--theme-color-1-light-rgbv: 85, 86, 87;
+				--theme-color-2: rgb(255, 255, 255);
+				--theme-color-2-rgbv: 255, 255, 255;
+				--theme-color-2-dark: rgb(204, 204, 204);
+				--theme-color-2-dark-rgbv: 204, 204, 204;
+				--theme-color-2-light: rgb(255, 255, 255);
+				--theme-color-2-light-rgbv: 255, 255, 255;
+				--theme-color-3: rgb(43, 44, 46);
+				--theme-color-3-rgbv: 43, 44, 46;
+				--theme-color-3-dark: rgb(34, 35, 36);
+				--theme-color-3-dark-rgbv: 34, 35, 36;
+				--theme-color-3-light: rgb(85, 86, 87);
+				--theme-color-3-light-rgbv: 85, 86, 87;
+				--theme-color-4: rgb(34, 196, 205);
+				--theme-color-4-rgbv: 0, 78, 99;
+				--theme-color-4-dark: rgb(122, 132, 157);
+				--theme-color-4-dark-rgbv: 122, 132, 157;
+				--theme-color-4-light: rgb(173, 183, 208);
+				--theme-color-4-light-rgbv: 173, 183, 208;
+				--theme-color-5: rgb(243, 243, 240);
+				--theme-color-5-rgbv: 243, 243, 240;
+				--theme-color-5-dark: rgb(194, 194, 192);
+				--theme-color-5-dark-rgbv: 194, 194, 192;
+				--theme-color-5-light: rgb(245, 245, 243);
+				--theme-color-5-light-rgbv: 245, 245, 243;
+				--theme-color-6: rgb(14, 14, 14);
+				--theme-color-6-rgbv: 14, 14, 14;
+				--theme-color-6-dark: rgb(11, 11, 11);
+				--theme-color-6-dark-rgbv: 11, 11, 11;
+				--theme-color-6-light: rgb(62, 62, 62);
+				--theme-color-6-light-rgbv: 62, 62, 62;
+			}
+
+			:root {
+				--button-color-preset-1-color: rgba(var(--theme-color-2-rgbv), 1);
+				--button-color-preset-1-background-hover-color: rgba(var(--theme-color-2-rgbv), 1);
+				--button-color-preset-1-background-color: transparent;
+				--button-color-preset-1-border-color: rgba(var(--theme-color-2-rgbv), 1);
+				--button-color-preset-1-hover-color: rgba(var(--theme-color-btn-rgbv), 1);
+				--button-color-preset-2-color: rgba(var(--theme-color-2-rgbv), 1);
+				--button-color-preset-2-background-hover-color: rgba(var(--theme-color-4-light-rgbv), 1);
+				--button-color-preset-2-background-color: rgba(var(--theme-color-btn-rgbv), 1);
+				--button-color-preset-2-border-color: transparent;
+				--button-color-preset-2-hover-color: rgba(var(--theme-color-1-dark-rgbv), 1);
+				--button-color-preset-3-color: var(--theme-color-3);
+				--button-color-preset-3-background-hover-color: var(--theme-color-4);
+				--button-color-preset-3-background-color: var(--theme-color-4);
+				--button-color-preset-3-border-color: var(--theme-color-3);
+				--button-color-preset-3-hover-color: var(--theme-color-3);
+			}
+
+			body {
+				background-color: inherit
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .title_preset_1 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 2.5rem;
+				font-family: Montserrat;
+				font-weight: 600;
+				font-style: normal;
+				letter-spacing: 0em;
+				line-height: 1.2em;
+				padding: 0px;
+				text-transform: none
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .title_preset_2 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 3.3333333333333335rem;
+				font-family: Montserrat;
+				font-weight: 600;
+				font-style: normal;
+				letter-spacing: 0.15em;
+				line-height: 1.2em;
+				padding: 0px;
+				text-transform: uppercase
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .title_preset_3 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 1.6666666666666667rem;
+				font-family: Montserrat;
+				font-weight: 600;
+				font-style: normal;
+				letter-spacing: 0em;
+				line-height: 1.2em;
+				padding: 0px;
+				text-transform: none
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .subtitle_preset_1 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 1.6666666666666667rem;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: -0.02em;
+				line-height: 1.6em;
+				padding: 0px;
+				text-transform: none
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .subtitle_preset_2 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 1.5rem;
+				font-family: Montserrat;
+				font-weight: 500;
+				font-style: normal;
+				letter-spacing: 0.05em;
+				line-height: 1.6em;
+				padding: 0px;
+				text-transform: uppercase
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .subtitle_preset_3 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 1.3333333333333333rem;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: 0.1em;
+				line-height: 1.6em;
+				padding: 0px;
+				text-transform: uppercase
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .body_preset_1 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: 0em;
+				line-height: 2em;
+				padding: 0px;
+				text-transform: none
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .body_preset_2 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: 0em;
+				line-height: 2em;
+				padding: 0px;
+				text-transform: none
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .body_preset_3 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 10px;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: 0em;
+				line-height: 2em;
+				padding: 0px;
+				text-transform: none
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .button_preset_1 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 12px;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: 0.15em;
+				line-height: 1.6em;
+				padding: 0px;
+				text-transform: uppercase
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .button_preset_2 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 12px;
+				font-family: Montserrat;
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: 0.15em;
+				line-height: 1.6em;
+				padding: 0px;
+				text-transform: uppercase
+			}
+
+			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .button_preset_3 {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 12px;
+				font-family: Montserrat;
+				font-weight: 500;
+				font-style: normal;
+				letter-spacing: 0.15em;
+				line-height: 1.6em;
+				padding: 0px;
+				text-transform: uppercase
+			}
+		</style>
+		<div class="page" id="vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published">
+			<div class="children">
+				<menu class="top_menu" data-sbid="sbid-dd1c8a5c-4bac-4ca6-a02b-9bdc393f1ecf"
+					id="vbid-80607789-a66f-4412-bdd1-645356cdbeab">
+
+					<style>
+						
 		menu.top_menu h1,
 		menu.top_menu h2,
 		menu.top_menu h3,
@@ -4042,26 +4885,8 @@ body {
 			padding-left: 15px !important
 		}
 
-		.website[data-menuposition=top_menu_fixed][menu-collapse=true] .top_menu,
-		.website[data-menuposition=simple_menu] .top_menu {
-			position: relative;
-			background-color: white !important;
-			color: black;
-			flex-wrap: wrap;
-			padding-left: 0;
-			padding-right: 0
-		}
-
-		.website[data-menuposition=simple_menu] .top_menu {
-			margin-top: var(--stick-top-section-height)
-		}
-
 		.website[data-menuposition=simple_menu] section[data-position=stick-top] {
 			z-index: 999
-		}
-
-		.website[data-menuposition=top_menu_fixed][menu-collapse=true] .top_menu {
-			position: fixed
 		}
 
 		.website[data-menuposition=top_menu_fixed][menu-collapse=true] .top_menu .links li,
@@ -4390,848 +5215,25 @@ body {
 			display: none !important
 		}
 
-		.website menu.bottom_footer {
-			box-sizing: border-box
-		}
 
-		.website[data-footerposition=hidden_footer] menu.bottom_footer {
-			display: none !important
-		}
-
-		.website[data-footerposition=horizontal_footer] .bottom_footer {
-			flex-direction: column;
-			background-color: black !important
-		}
-
-		.website[data-footerposition=horizontal_footer] .bottom_footer .bottom_footer_elements {
-			display: flex;
-			flex-direction: row
-		}
-
-		.website[data-footerposition=vertical_footer] .bottom_footer {
-			flex-direction: column;
-			align-items: center;
-			background-color: var(--menu-background-color) !important
-		}
-
-		menu.bottom_footer {
-			display: flex;
-			position: relative;
-			padding: 0;
-			margin: 0;
-			align-items: center;
-			overflow: hidden;
-			flex-wrap: wrap
-		}
-
-		menu.bottom_footer .pic-side,
-		menu.bottom_footer .links,
-		menu.bottom_footer .text-side,
-		menu.bottom_footer .identity {
-			position: relative;
-			flex-grow: 1;
-			align-items: center;
-			display: flex;
-			flex-direction: row;
-			padding: 20px;
-			box-sizing: border-box
-		}
-
-		menu.bottom_footer .pic-side {
-			padding: 0
-		}
-
-		menu.bottom_footer .links,
-		menu.bottom_footer .text-side {
-			position: relative;
-			flex-grow: 1;
-			align-items: center;
-			display: flex;
-			flex-direction: row;
-			min-width: 140px;
-			height: fit-content;
-			padding: 10px
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .text-side {
-			border-left: 1px solid #80808070
-		}
-
-		menu.bottom_footer .links {
-			min-width: inherit;
-			justify-content: center;
-			max-width: 100%;
-			flex-wrap: wrap
-		}
-
-		menu.bottom_footer .identity {
-			flex-direction: column;
-			justify-content: center;
-			align-items: baseline
-		}
-
-		menu.bottom_footer .links {
-			align-items: baseline;
-			height: fit-content
-		}
-
-		menu.bottom_footer .links:empty,
-		menu.bottom_footer .buttons:empty,
-		menu.bottom_footer .logotype:empty,
-		menu.bottom_footer .identity:empty,
-		menu.bottom_footer .text-side:empty {
-			display: none
-		}
-
-		menu.bottom_footer .links>li {
-			margin: 20px;
-			font-weight: 700
-		}
-
-		menu.bottom_footer .links>li .submenu {
-			padding: 10px 0 0;
-			font-weight: 400
-		}
-
-		menu.bottom_footer[data-horizontalalign=center] .links>li,
-		menu.bottom_footer[data-horizontalalign=center] .links>li .submenu>li {
-			text-align: center
-		}
-
-		menu.bottom_footer[data-horizontalalign=left] .links>li,
-		menu.bottom_footer[data-horizontalalign=left] .links>li .submenu>li {
-			text-align: left
-		}
-
-		menu.bottom_footer[data-horizontalalign=right] .links>li,
-		menu.bottom_footer[data-horizontalalign=right] .links>li .submenu>li {
-			text-align: right
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .pic-side,
-		menu[data-footerposition=horizontal_footer] .pic-side img.pic {
-			width: 100%
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer {
-			padding-top: 20px;
-			padding-bottom: 0
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .identity {
-			order: 1;
-			align-items: center;
-			padding-top: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			margin-bottom: 0
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .identity .logotype {
-			align-items: center;
-			text-align: center
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .text-side {
-			order: 3;
-			text-align: center;
-			flex-direction: column;
-			padding: 10px;
-			margin: 10px
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .buttons {
-			order: 4;
-			text-align: center
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .links {
-			order: 5;
-			padding-bottom: 20px !important
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .pic-side {
-			order: 6
-		}
-
-		.website[data-footerposition=vertical_footer] menu.bottom_footer .section-link {
-			order: 7;
-			padding-bottom: 16px
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer {
-			flex-wrap: nowrap;
-			padding: 20px
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .identity {
-			flex-grow: 0;
-			padding: 10px;
-			min-width: 100px
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .text-side {
-			flex-direction: column;
-			align-items: start;
-			flex-grow: 1
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .buttons {
-			display: flex;
-			flex-direction: column;
-			flex-grow: 0
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .links {
-			flex-grow: 1
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .pic-side {
-			align-self: stretch
-		}
-
-		.website[data-footerposition=horizontal_footer] menu.bottom_footer .pic-side iframe {
-			height: 100%
-		}
-
-		@media only screen and (max-width: 800px) {
-			menu.bottom_footer {
-				flex-wrap: wrap !important
-			}
-		}
-	</style>
-
-
-
-	<style>
-		section[data-arranger=flex][data-arranger-arrows-position=outside] .slide-arrows,
-		section[data-arranger=flex][data-arranger-arrows-position=overlay] .slide-arrows {
-			z-index: 3
-		}
-
-		section[data-arranger=flex][data-arranger-arrows-position=none] .slide-arrows button {
-			display: none
-		}
-
-		section[data-arranger=flex][data-arranger-arrows-position=outside] .slide-arrows button,
-		section[data-arranger=flex][data-arranger-arrows-position=overlay] .slide-arrows button {
-			position: absolute;
-			display: block;
-			top: 50%;
-			z-index: 2;
-			color: #fff;
-			text-transform: uppercase;
-			padding: 9px 12px;
-			background-color: transparent;
-			border: 2px solid rgba(255, 255, 255, .5);
-			border-radius: 4px;
-			box-shadow: 0 .25em .5em #0000001a;
-			text-shadow: 0 .25em .5em rgba(0, 0, 0, .1);
-			opacity: 1;
-			cursor: pointer;
-			transition: opacity .15s ease, border .3s ease-in-out;
-			transform: translateY(-50%);
-			line-height: 1
-		}
-
-		section[data-arranger=flex] .slide-arrows .left-arrow {
-			left: 2em
-		}
-
-		section[data-arranger=flex] .slide-arrows .right-arrow {
-			right: 2em
-		}
-
-		section[data-arranger=flex] {
-			--slideshow-arrows-color: 128, 128, 128
-		}
-
-		section[data-arranger=flex] .slide-arrows button {
-			border-color: rgba(var(--slideshow-arrows-color), .5) !important
-		}
-
-		section[data-arranger=flex] .slide-arrows svg path {
-			fill: rgb(var(--slideshow-arrows-color));
-			transition: fill .3s ease-in-out
-		}
-
-		section[data-arranger=flex] .slide-arrows .left-arrow svg {
-			transform: rotate(180deg)
-		}
-	</style>
-	<style>
-		@font-face {
-			font-family: open-sans;
-			font-style: normal;
-			font-weight: 400;
-			src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"), url(https://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: jaf-bernino-sans;
-			src: url(https://fonts.gstatic.com/s/durusans/v20/xn7iYH8xwmSyTvEV_HOBSP3ZVtyGZg.woff2) format("woff2");
-			font-weight: 400;
-			font-style: normal;
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: ff-tisa-web-pro;
-			src: url(https://fonts.gstatic.com/s/durusans/v20/xn7iYH8xwmSyTvEV_HOBSP3ZVtyGZg.woff2) format("woff2");
-			font-weight: 400;
-			font-style: normal;
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: freight-sans-pro;
-			src: local("Arial");
-			font-weight: 400;
-			font-style: normal;
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Raleway Thin;
-			font-style: normal;
-			font-weight: 100;
-			src: local("Raleway Thin"), local("Raleway-Thin"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao7CIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Raleway;
-			font-style: normal;
-			font-weight: 400;
-			src: local("Raleway"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Raleway Heavy;
-			font-style: normal;
-			font-weight: 900;
-			src: local("Raleway Heavy"), local("Raleway-Heavy"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Titillium WebThin;
-			font-style: normal;
-			font-weight: 200;
-			src: local("Titillium WebThin"), local("TitilliumWeb-Thin"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaorCIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Titillium Web;
-			font-style: normal;
-			font-weight: 400;
-			src: local("Titillium Web"), local("TitilliumWeb-Regular"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Titillium WebBlack;
-			font-style: normal;
-			font-weight: 900;
-			src: local("Titillium WebBlack"), local("TitilliumWeb-Black"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Roboto Slab Light;
-			font-style: normal;
-			font-weight: 100;
-			src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao7CIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: Roboto Slab;
-			font-style: normal;
-			font-weight: 400;
-			src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrEVIT9d0c8.woff2) format("woff2");
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: HelveNueThinNormal;
-			src: url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.eot);
-			src: url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.eot?iefix) format("eot"), url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.woff) format("woff"), url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.ttf) format("truetype"), url(https://ui-cdn.patientpop.com/assets/fonts/helvetica-neue/HelveticaNeueLTW1G-Th.svg#webfontJR0GaG5Z) format("svg");
-			font-weight: 400;
-			font-style: normal;
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: DahliaMedium;
-			src: url(https://fontsforwellpath.netlify.app/fonts/Dahlia-Medium.woff2) format("woff2"), url(https://fontsforwellpath.netlify.app/fonts/Dahlia-Medium.woff) format("woff");
-			font-weight: 500;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: CanelaWeb;
-			src: url(https://fontsforwellpath.netlify.app/fonts/Canela-Medium-Web.woff2) format("woff2"), url(https://fontsforwellpath.netlify.app/fonts/Canela-Medium-Web.woff) format("woff");
-			font-weight: 500;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap
-		}
-
-		@font-face {
-			font-family: LaLuxe;
-			src: url(https://fontsforwellpath.netlify.app/fonts/la_luxe.woff2) format("woff2"), url(https://fontsforwellpath.netlify.app/fonts/la_luxe.woff) format("woff");
-			font-weight: 500;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap
-		}
-	</style>
-	<style>
-		.odometer.odometer-auto-theme,
-		.odometer.odometer-theme-minimal,
-		.odometer.odometer-auto-theme .odometer-digit,
-		.odometer.odometer-theme-minimal .odometer-digit {
-			display: inline-block;
-			vertical-align: middle;
-			vertical-align: auto;
-			zoom: 1;
-			display: inline;
-			position: relative
-		}
-
-		.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
-		.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-spacer {
-			display: inline-block;
-			vertical-align: middle;
-			vertical-align: auto;
-			zoom: 1;
-			display: inline;
-			visibility: hidden
-		}
-
-		.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
-		.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-inner {
-			text-align: left;
-			display: block;
-			position: absolute;
-			inset: 0;
-			overflow: hidden
-		}
-
-		.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
-		.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon {
-			display: block
-		}
-
-		.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
-		.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon-inner {
-			display: block;
-			-webkit-backface-visibility: hidden
-		}
-
-		.odometer.odometer-auto-theme .odometer-digit .odometer-value,
-		.odometer.odometer-theme-minimal .odometer-digit .odometer-value {
-			display: block;
-			-webkit-transform: translateZ(0)
-		}
-
-		.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
-		.odometer.odometer-theme-minimal .odometer-digit .odometer-value.odometer-last-value {
-			position: absolute
-		}
-
-		.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
-		.odometer.odometer-theme-minimal.odometer-animating-up .odometer-ribbon-inner {
-			-webkit-transition: -webkit-transform 2s;
-			-moz-transition: -moz-transform 2s;
-			-ms-transition: -ms-transform 2s;
-			-o-transition: -o-transform 2s;
-			transition: transform 2s
-		}
-
-		.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
-		.odometer.odometer-theme-minimal.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
-		.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
-		.odometer.odometer-theme-minimal.odometer-animating-down .odometer-ribbon-inner {
-			-webkit-transform: translateY(-100%);
-			-moz-transform: translateY(-100%);
-			-ms-transform: translateY(-100%);
-			-o-transform: translateY(-100%);
-			transform: translateY(-100%)
-		}
-
-		.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
-		.odometer.odometer-theme-minimal.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
-			-webkit-transition: -webkit-transform 2s;
-			-moz-transition: -moz-transform 2s;
-			-ms-transition: -ms-transform 2s;
-			-o-transition: -o-transform 2s;
-			transition: transform 2s;
-			-webkit-transform: translateY(0);
-			-moz-transform: translateY(0);
-			-ms-transform: translateY(0);
-			-o-transform: translateY(0);
-			transform: translateY(0)
-		}
-	</style>
-	<!-- generated fonts list from user selection -->
-	<style>
-		@font-face {
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 400;
-			font-display: swap;
-			src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf) format('truetype');
-		}
-
-		@font-face {
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 500;
-			font-display: swap;
-			src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw5aX8.ttf) format('truetype');
-		}
-
-		@font-face {
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 600;
-			font-display: swap;
-			src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aX8.ttf) format('truetype');
-		}
-	</style>
-	<script type="text/javascript">"use strict"; class RateLimiter { constructor(fillRate, bucketSize, retryOnErrors = void 0) { this.add = action => { const curMillis = this.fillBucket(); const recovery = e => { if ((retryOnErrors || []).find(_ => e.message.includes(_))) { console.debug(`recovering from error [${e.message}]`); return this.add(action) } else { return Promise.reject(e) } }; if (this.curTokens > 0) { this.curTokens -= 1; return action().catch(recovery) } else { const clientPromise = new Promise((resolve, reject) => { this.queue.push(() => { return action().then(resolve).catch(recovery).catch(e => reject(e)) }) }); if (!this.pendingFlush) { this.pendingFlush = setTimeout(this.flush, 1 + 1e3 - curMillis % 1e3) } return clientPromise } }; this.flush = () => { const curMillis = this.fillBucket(); if (this.pendingFlush) { clearTimeout(this.pendingFlush); this.pendingFlush = void 0 } if (this.queue.length > 0) { while (this.curTokens > 0 && this.queue.length > 0) { this.curTokens -= 1; const pendingCall = this.queue.shift(); pendingCall && pendingCall() } } if (this.queue.length > 0) { this.pendingFlush = setTimeout(this.flush, 1e3 - curMillis % 1e3) } return curMillis }; this.fillBucket = () => { const curMillis = new Date().getTime(); const curSeconds = Math.round(curMillis / 1e3); if (this.lastIncrementTime === 0) { this.curTokens = this.bucketSize } else if (this.curTokens !== this.bucketSize && this.lastIncrementTime !== curSeconds) { const secondsDiff = curSeconds - this.lastIncrementTime; this.curTokens = Math.min(this.bucketSize, secondsDiff * this.fillRate) } this.lastIncrementTime = curSeconds; return curMillis }; this.bucketSize = bucketSize; this.fillRate = fillRate; this.queue = []; this.lastIncrementTime = 0; this.curTokens = 0; this.fillBucket() } } window.RateLimiter = RateLimiter; const debounceHandles = new Map; const debounce = (id, waitSeconds, action) => { if (debounceHandles.has(id)) { clearTimeout(debounceHandles.get(id)); debounceHandles.delete(id) } debounceHandles.set(id, setTimeout(() => { debounceHandles.delete(id); action() }, waitSeconds * 1e3)) }; window.debounce = debounce; const createArrowSvg = () => { const arrowForwardSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg"); const arrowForwardPath = document.createElementNS("http://www.w3.org/2000/svg", "path"); arrowForwardSvg.setAttribute("aria-hidden", "true"); arrowForwardSvg.setAttribute("viewbox", "0 0 24 24"); arrowForwardSvg.setAttribute("focusable", "false"); arrowForwardPath.setAttribute("d", "M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"); arrowForwardPath.setAttribute("fill", "none"); arrowForwardSvg.setAttribute("width", "24px"); arrowForwardSvg.setAttribute("height", "24px"); arrowForwardSvg.appendChild(arrowForwardPath); return arrowForwardSvg }; window.createArrowSvg = createArrowSvg;
-	</script>
-	<script type="text/javascript">"use strict"; const IMCEvents = { initialized: {}, eventListeners: {}, eventTicking: {} }; IMCEvents.registerEventOnce = function (eventName, eventIdentifier, action) { const idKey = eventName + "/" + eventIdentifier; if (!IMCEvents.initialized[idKey]) { IMCEvents.initialized[idKey] = true; window.addEventListener("DOMContentLoaded", () => action(null)); if (!IMCEvents.eventListeners[eventName]) { IMCEvents.eventListeners[eventName] = []; window.addEventListener(eventName, ev => { if (!IMCEvents.eventTicking[eventName]) { window.requestAnimationFrame(function () { IMCEvents.eventListeners[eventName].forEach(listener => listener(ev)); IMCEvents.eventTicking[eventName] = false }); IMCEvents.eventTicking[eventName] = true } }) } IMCEvents.eventListeners[eventName].push(action) } }; window.IMCEvents = IMCEvents;
-	</script>
-	<script type="text/javascript">"use strict"; const Effects = { scrollInitialized: false, odometerInitialized: false }; Effects.init = function () { if (!Effects.odometerInitialized) { Effects.odometerInitialized = true; lazyOdometerInit() } if (!Effects.scrollInitialized) { Effects.scrollInitialized = true; lazyStaticWebsiteInit(); effectsInit() } }; let last_known_scroll_position = 0; let ticking = false; let _cache = {}; let _cacheCleaner = {}; function cache(key, timeMS, calc) { if (_cache[key]) { return _cache[key] } else { let calcValue = calc(); cache[key] = calcValue; if (!_cacheCleaner[key]) { _cacheCleaner[key] = setTimeout(() => { delete _cacheCleaner[key]; delete _cache[key] }, timeMS) } return calcValue } } let animationTimeout; function bumpAnimationTimeout() { animationTimeout && clearTimeout(animationTimeout); animationTimeout = setTimeout(function () { clearTimeout(animationTimeout); animationTimeout = void 0; ticking = false }, .5) } function onScroll() { const body = document.querySelector("body"); last_known_scroll_position = window.scrollY; if (last_known_scroll_position > 50) { const identity = document.getElementsByClassName("identity"); const menuIdentity = identity[0]; menuIdentity && document.documentElement.style.setProperty("--identity-height", menuIdentity.clientHeight * -1 + "px"); body.setAttribute("scroll-status", "scrolled") } else { body.setAttribute("scroll-status", "top") } if (!animationTimeout) { ticking = true; doAnimationCycle() } bumpAnimationTimeout() } function ignoreError(func) { try { func() } catch (e) { } } const doAnimationCycle = function () { window.requestAnimationFrame(function () { let sections = cache("sections", 500, () => document.querySelectorAll("section")); for (let idx = 0; idx < sections.length; idx++) { const section = sections[idx]; cycleEffect(section) } if (ticking) setTimeout(doAnimationCycle, .05) }) }; const effectsInit = function () { window.addEventListener("scroll", onScroll); document.onmousemove = function (e) { document.documentElement.style.setProperty("--mouse-x", e.clientX + 10 + "px"); document.documentElement.style.setProperty("--mouse-y", e.clientY + 20 + "px") } }; const lazyOdometerInit = function () { if (!window.Odometer) { return } const odoDataAttribute = "data-odovalue"; const justNumbers = /^\d+$/; const lazyOdos = [].slice.call(document.querySelectorAll('section[data-effecttext=text-effect-7] *[data-elementtype="TITLE"]')).filter(_ => justNumbers.test(_.innerText.replace(/[,.]/g, "").trim())); let urlParams = new URLSearchParams(window.location.search); if (urlParams.get("screenshot") === "true" || !("IntersectionObserver" in window)) { } else if ("IntersectionObserver" in window) { const lazyOdoInstances = lazyOdos.map(odoEl => { const initialValue = odoEl.innerText.trim(); odoEl.setAttribute(odoDataAttribute, initialValue); return new Odometer({ el: odoEl, value: 0, format: initialValue.includes(",") ? "(,ddd).dd" : "(ddd).dd" }) }); let lazyOdoObserver = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { const odoEl = entry.target; const odoInst = lazyOdoInstances[lazyOdos.findIndex(_ => _ === odoEl)]; if (entry.isIntersecting) { setTimeout(() => { odoInst.update(odoEl.getAttribute(odoDataAttribute)) }, 200) } else { odoInst.update(0) } }) }); lazyOdos.forEach(function (lazyOdo) { lazyOdoObserver.observe(lazyOdo) }) } else { } }; const lazyStaticWebsiteInit = function () { const lazySections = [].slice.call(document.querySelectorAll("article")); let urlParams = new URLSearchParams(window.location.search); if (urlParams.get("screenshot") === "true" || !("IntersectionObserver" in window)) { lazySections.forEach(function (section) { section.setAttribute("data-visible", "true") }) } else if ("IntersectionObserver" in window) { let lazySectionObserver = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { let lazySection = entry.target; lazySection.setAttribute("data-visible", "true") } else { let lazySection = entry.target; lazySection.setAttribute("data-visible", "false") } }) }); lazySections.forEach(function (lazySection) { lazySectionObserver.observe(lazySection) }) } else { } }; const cycleEffect = function (section) { const site_offset = document.querySelector(".website").offsetTop; const top_end = window.pageYOffset - section.offsetTop + site_offset; if (section.getAttribute("data-imagescroll") === "parallax") { const parallex_ratio = 3; ignoreError(() => { section.getElementsByClassName("pic-side")[0].getElementsByTagName("img")[0].style.transform = "translate3d(0px, " + Math.round(top_end / parallex_ratio) + "px, -100px) translateZ(0)" }) } else { if (section.getAttribute("data-imagescroll") === "fixed") { const fixed_parallex_ratio = 1; ignoreError(() => { section.getElementsByClassName("pic-side")[0].getElementsByTagName("img")[0].style.transform = "translate3d(0px, " + top_end / fixed_parallex_ratio + "px, 0px) translateZ(0)" }) } else { if (section.getAttribute("data-imagescroll") === "normal") { ignoreError(() => { }) } } } }; window.Effects = Effects;
-	</script>
-	<script type="text/javascript">"use strict"; const Clamping = { clampingInitialized: false }; Clamping.init = function () { if (!Clamping.clampingInitialized) { Clamping.clampingInitialized = true; initializeClamping() } }; Clamping.recalcClamping = function () { [...document.getElementsByClassName("unclamper")].forEach(unclamper => { const target = window.document.getElementById(unclamper.getAttribute("data-unclampvbid")); if (target.scrollHeight > target.clientHeight) { unclamper.classList.remove("hidden") } else { unclamper.classList.add("hidden") } }) }; Clamping.unClampClick = e => { var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l; if ((_a = e == null ? void 0 : e.target) == null ? void 0 : _a.classList.contains("unclamper")) { const elementId = (_c = (_b = e.target) == null ? void 0 : _b.getAttribute("data-unclampvbid")) != null ? _c : null; if (elementId) { const item = (_f = (_e = (_d = e.target) == null ? void 0 : _d.parentElement) == null ? void 0 : _e.querySelector(`[id='${elementId}']`)) != null ? _f : null; if (item) { (_g = item == null ? void 0 : item.classList) == null ? void 0 : _g.remove("clamping") } else { const target = (_i = (_h = window.document) == null ? void 0 : _h.getElementById(elementId)) != null ? _i : null; (_j = target == null ? void 0 : target.classList) == null ? void 0 : _j.remove("clamping") } (_l = (_k = e.target) == null ? void 0 : _k.classList) == null ? void 0 : _l.add("hidden") } } }; function initializeClamping() { window.addEventListener("click", e => { Clamping.unClampClick(e) }); const resizeObserver = new ResizeObserver(() => { Clamping.recalcClamping() }); resizeObserver.observe(window.document.body) } window.Clamping = Clamping;
-	</script>
-	<script type="text/javascript">"use strict"; var __async = (__this, __arguments, generator) => { return new Promise((resolve, reject) => { var fulfilled = value => { try { step(generator.next(value)) } catch (e) { reject(e) } }; var rejected = value => { try { step(generator.throw(value)) } catch (e) { reject(e) } }; var step = x => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected); step((generator = generator.apply(__this, __arguments)).next()) }) }; const Menu = { originalMenuPosition: null, prevWindowWidth: null, stickTopSectionHeightTimerID: null, menuResizingTimerId: null }; let attribute = "data-menuposition"; function ifExistsWithDefault(value, action, defaultValue) { if (value) { return action(value) } else { return defaultValue } } function correctSubmenusPositions(site) { site.setAttribute("data-menucalculator", "active"); let htmlCollection = document.getElementsByClassName("submenu"); let array = [].slice.call(htmlCollection); let docWidth = document.body.clientWidth; array.forEach(item => { item.style.left = "22px"; if (item.clientWidth + item.parentNode.offsetLeft > docWidth) { let offset = docWidth - (item.clientWidth + item.parentNode.offsetLeft); item.style.left = offset + "px" } }); site.setAttribute("data-menucalculator", "inactive") } const setResizeHorizontal = () => { if (Menu.menuResizingTimerId) { clearTimeout(Menu.menuResizingTimerId) } Menu.menuResizingTimerId = setTimeout(() => { const site = document.querySelector("div.website[data-menuposition]"); site == null ? void 0 : site.setAttribute("resize-horizontal", "false") }, 800) }; function menuCalculations() { return () => __async(this, null, function* () { const site = document.querySelector("div.website[data-menuposition]"); if (site) { const initialSiteMenuPosition = site.getAttribute(attribute); site.setAttribute("menu-collapse", "false"); site.setAttribute("menu-shrink", "false"); site.setAttribute("resize-horizontal", "true"); if (Menu.originalMenuPosition === null) { Menu.originalMenuPosition = initialSiteMenuPosition } if (Menu.originalMenuPosition !== initialSiteMenuPosition && initialSiteMenuPosition !== "full_menu") { Menu.originalMenuPosition = initialSiteMenuPosition } site.setAttribute(attribute, Menu.originalMenuPosition) } let websiteLogo = document.querySelector('.top_menu img[data-elementtype="ICON"]'); if (websiteLogo && !websiteLogo.complete) { websiteLogo.onload = menuCalculations } let siteMenuPosition = site ? site.getAttribute(attribute) : void 0; let numOfLink = ifExistsWithDefault(document.querySelectorAll(".top_menu .links > li"), v => v.length, 0); let leftWidth = 0; let rightWidth = 0; let prevLeftWidth = 0; let prevRightWidth = 0; let entireWidth = 0; let foundMiddleFromLeft = false; let foundMiddleFromRight = false; let compensationToMiddle = 0; ifExistsWithDefault(document.querySelectorAll(".top_menu .links > li"), allLinks => allLinks.forEach(function (arrayItem) { arrayItem.setAttribute("ismiddle", "false"); entireWidth = entireWidth + arrayItem.clientWidth })); ifExistsWithDefault(document.querySelectorAll(".top_menu .links > li"), allLinks => allLinks.forEach(function (arrayItem, idx) { leftWidth = leftWidth + arrayItem.clientWidth; rightWidth = rightWidth + allLinks[allLinks.length - idx - 1].clientWidth; if (leftWidth >= entireWidth / 2 && foundMiddleFromLeft == false) { foundMiddleFromLeft = idx - 1; prevLeftWidth = leftWidth } if (rightWidth >= entireWidth / 2 && foundMiddleFromRight == false) { foundMiddleFromRight = idx + 1; prevRightWidth = rightWidth } })); let identityWidth = ifExistsWithDefault(document.querySelector(".top_menu .identity"), v => v.scrollWidth, 0); document.documentElement.style.setProperty("--identity-width", identityWidth + "px"); let allLinksArray = document.querySelectorAll(".top_menu .links > li"); if (prevRightWidth > prevLeftWidth) { allLinksArray[foundMiddleFromLeft].setAttribute("ismiddle", "true"); compensationToMiddle = (entireWidth - prevRightWidth - prevRightWidth) / -2 } else { const indexFromLeftTemp = allLinksArray.length - foundMiddleFromRight - 1; if (allLinksArray[indexFromLeftTemp]) { allLinksArray[indexFromLeftTemp].setAttribute("ismiddle", "true") } compensationToMiddle = (entireWidth - prevRightWidth - prevRightWidth) / -2 } let editorMenuHeight = ifExistsWithDefault(document.querySelector("header"), v => v.scrollHeight, 0); let identityHeight = ifExistsWithDefault(document.querySelector(".top_menu .identity"), v => v.scrollHeight, 0); let buttonsHeight = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.scrollHeight, 0); let linksHeight = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.scrollHeight, 0); let button1Height = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON"]'), v => v.scrollHeight, 0); let button2Height = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON2"]'), v => v.scrollHeight, 0); let button3Height = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON3"]'), v => v.scrollHeight, 0); const maxButtonHeight = Math.max(button1Height, button2Height, button3Height); let menuTop = document.getElementsByClassName("top_menu"); let menuTopInstance = menuTop && menuTop[0]; if (!menuTopInstance) return; document.documentElement.style.setProperty("--links-height", linksHeight + "px"); document.documentElement.style.setProperty("--buttons-height", buttonsHeight + "px"); document.documentElement.style.setProperty("--num-of-links", numOfLink); document.documentElement.style.setProperty("--compensation-to-middle", compensationToMiddle + "px"); let windowWidthNormalized = window.innerWidth; let windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; let mobileCheck = false; if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { mobileCheck = true } let buttonsWidth = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.clientWidth, 0); let linksWidth = ifExistsWithDefault(document.querySelectorAll(".top_menu .links .main-links"), v => { let linksWidth2 = 0; v.forEach(link => { var _a; const menuParent = link.querySelector(".menu-parent"); const styles = window.getComputedStyle(link); const spacing = parseInt(styles.borderLeftWidth) + parseInt(styles.borderRightWidth) + parseInt(styles.marginLeft) + parseInt(styles.marginRight) + parseInt(styles.paddingRight) + parseInt(styles.paddingLeft); linksWidth2 += (menuParent == null ? void 0 : menuParent.offsetWidth) ? menuParent.offsetWidth + (spacing || 0) : (_a = link.scrollWidth) != null ? _a : 0 }); return linksWidth2 }, 0); let linksHeightLatest = ifExistsWithDefault(document.querySelector(".top_menu .links"), v => v.clientHeight, 0); const spaceForSideMenuSpread = Math.max(0, windowHeight - identityHeight - linksHeightLatest - buttonsHeight - editorMenuHeight - 80); document.documentElement.style.setProperty("--side-menu-space", spaceForSideMenuSpread + "px"); if (buttonsHeight > maxButtonHeight * 2 && siteMenuPosition !== "full_menu") { site && site.setAttribute("menu-collapse", "true") } let collapseCheck = false; if (site) { switch (siteMenuPosition) { case "top_menu_fixed": if (linksWidth + identityWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "top_menu": if (linksWidth + identityWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "fix_menu": if (linksWidth + identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "fix_menu_bright": if (linksWidth + identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "middle_transparent_menu": if (linksWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "simple_menu": if (linksWidth > windowWidthNormalized || identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break; case "center_logo_menu": if (linksWidth > windowWidthNormalized || identityWidth + buttonsWidth > windowWidthNormalized) { collapseCheck = true } correctSubmenusPositions(site); break } } if (windowWidthNormalized < 600 || mobileCheck || collapseCheck) { if (siteMenuPosition !== "full_menu" && siteMenuPosition !== "transparent_menu") { site.setAttribute(attribute, "full_menu"); siteMenuPosition = "full_menu" } } else { if (!!site && !!Menu.originalMenuPosition) { site.setAttribute(attribute, Menu.originalMenuPosition); Menu.originalMenuPosition = null } } const stickTopSection = document.querySelector('section[data-position="stick-top"]'); if (stickTopSection && (windowWidthNormalized && (!Menu.prevWindowWidth && Menu.prevWindowWidth !== 0 || Menu.prevWindowWidth !== windowWidthNormalized))) { if (Menu.stickTopSectionHeightTimerID) { clearTimeout(Menu.stickTopSectionHeightTimerID) } updateStickTopSectionHeight(); Menu.stickTopSectionHeightTimerID = setTimeout(() => { updateStickTopSectionHeight() }, 200) } Menu.prevWindowWidth = windowWidthNormalized; menuTopInstance && document.documentElement.style.setProperty("--menu-height", menuTopInstance.clientHeight * -1 + "px"); const { totalButtonsWidth, actualButtonsWidth } = calcButtonsWidth(); if (totalButtonsWidth > actualButtonsWidth && siteMenuPosition === "full_menu") { site && site.setAttribute("menu-shrink", "true") } const initialLogoMobileAttr = site == null ? void 0 : site.getAttribute("data-menulogovisiblemobile"); if (initialLogoMobileAttr === "true" && siteMenuPosition === "full_menu") { let hamburger = document.querySelector(".top_menu .hamburger"); const hamburgerWidth = ifExistsWithDefault(hamburger, _hamburger => { var _a; let hamburgerWidth2 = 0; hamburgerWidth2 += _hamburger.scrollWidth; const hamburgerRight = parseInt((_a = window.getComputedStyle(_hamburger)) == null ? void 0 : _a.right); hamburgerWidth2 += window && hamburgerRight && !Number.isNaN(hamburgerRight) ? hamburgerRight : 0; return hamburgerWidth2 }, 0); const spaceAroundButtons = windowWidthNormalized - totalButtonsWidth; if (totalButtonsWidth > windowWidthNormalized - spaceAroundButtons / 2 - hamburgerWidth) { site && site.setAttribute("menu-shrink", "true") } } const menuButtonHeight = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.clientHeight, 0); const menuIconHeight = ifExistsWithDefault(document.querySelector(".top_menu .identity [data-elementtype=ICON]"), v => v.clientHeight, 0); document.documentElement.style.setProperty("--dynamic-buttons-height", menuButtonHeight + "px"); document.documentElement.style.setProperty("--dynamic-menu-logo-height", menuIconHeight + "px"); if (initialLogoMobileAttr) { setTimeout(() => { const topMenu = document == null ? void 0 : document.querySelector(".top_menu"); topMenu && document.documentElement.style.setProperty("--menu-height", topMenu.clientHeight * -1 + "px") }, 0) } setResizeHorizontal() }) } const calcButtonsWidth = () => { let button1Width = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON"]'), v => v.parentNode.scrollWidth, 0); let button2Width = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON2"]'), v => v.parentNode.scrollWidth, 0); let button3Width = ifExistsWithDefault(document.querySelector('.top_menu .buttons div[data-elementtype="BUTTON3"]'), v => v.parentNode.scrollWidth, 0); let totalButtonsWidth = button1Width + button2Width + button3Width; let actualButtonsWidth = ifExistsWithDefault(document.querySelector(".top_menu .buttons"), v => v.clientWidth, 0); return { button1Width, button2Width, button3Width, totalButtonsWidth, actualButtonsWidth } }; const updateStickTopSectionHeight = () => { var _a; const stickTopSection = document.querySelector('section[data-position="stick-top"]'); if (stickTopSection) { const height = (_a = stickTopSection == null ? void 0 : stickTopSection.getBoundingClientRect()) == null ? void 0 : _a.height; if (height || height === 0) { document.documentElement.style.setProperty("--stick-top-section-height", height + "px") } } }; window.menuCalculations = menuCalculations(); IMCEvents.registerEventOnce("resize", "menu-resizing", menuCalculations); Menu.detectMenuExpandClick = e => { if (e.target.classList.contains("menu-parent")) { if (e.target.parentElement.classList.contains("menu-closed")) { e.target.parentElement.classList.replace("menu-closed", "menu-open") } else if (e.target.parentElement.classList.contains("menu-open")) { e.target.parentElement.classList.replace("menu-open", "menu-closed") } } if (e.target.classList.contains("expand-icon")) { if (e.target.parentElement.parentElement.classList.contains("menu-closed")) { e.target.parentElement.parentElement.classList.replace("menu-closed", "menu-open") } else if (e.target.parentElement.parentElement.classList.contains("menu-open")) { e.target.parentElement.parentElement.classList.replace("menu-open", "menu-closed") } } }; Menu.init = () => { document.addEventListener("click", Menu.detectMenuExpandClick) }; window.Menu = Menu;
-	</script>
-	<script type="text/javascript">"use strict"; var __defProp = Object.defineProperty; var __defProps = Object.defineProperties; var __getOwnPropDescs = Object.getOwnPropertyDescriptors; var __getOwnPropSymbols = Object.getOwnPropertySymbols; var __hasOwnProp = Object.prototype.hasOwnProperty; var __propIsEnum = Object.prototype.propertyIsEnumerable; var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value; var __spreadValues = (a, b) => { for (var prop in b ||= {}) if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]); if (__getOwnPropSymbols) for (var prop of __getOwnPropSymbols(b)) { if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]) } return a }; var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b)); const Section = { localStorageKey: "", localStorageKeyProd: "", isFromEditor: false, localStorageData: {}, items: {} }; const positionAttribute = "data-position"; Section.init = (isFromEditor = true, isUpdate = false) => { var _a; Section.isFromEditor = isFromEditor; const websiteId = (_a = document.querySelector(".website")) == null ? void 0 : _a.getAttribute("id"); const uniqueSection = document.querySelectorAll("section[data-position]"); const pageId = getPageId(); Section.localStorageKey = websiteId ? `uniqueSection${isFromEditor ? "Editor" : ""}-${websiteId}` : ""; Section.localStorageKeyProd = websiteId ? `uniqueSection-${websiteId}` : ""; let localStorageItemParsed = {}; if (Section.localStorageKey) { const localStorageItemJson = localStorage.getItem(Section.localStorageKey); if (localStorageItemJson) { try { localStorageItemParsed = JSON.parse(localStorageItemJson) } catch (e) { localStorageItemParsed = {} } } } Section.localStorageData = localStorageItemParsed || {}; Section.items = localStorageItemParsed[pageId] || {}; uniqueSection.forEach(section => { const dataPosition = section.getAttribute(positionAttribute); if (dataPosition === "popup" || dataPosition === "stick-top") { initUniquePositionSection(section, dataPosition, isUpdate) } }) }; Section.destroy = pageVBID => { if (pageVBID && Section.items) { delete Section.items; saveToLocalStorage(pageVBID) } }; Section.clearSectionItem = (pageVBID, sectionVBID, type) => { var _a; if (Section.items && Section.items[type] && ((_a = Section.items[type]) == null ? void 0 : _a.sectionId) === sectionVBID) { if (type === "stick-top") { Section.updateStickTopSectionHeight(0) } delete Section.items[type]; saveToLocalStorage(pageVBID) } }; Section.updateStickTopSectionHeight = height => { if (height || height === 0) { setStickTopHeight(height) } }; Section.updatePopUpSection = () => { const popupSection = document.querySelector('section[data-position="popup"]'); if (popupSection) { const value = togglePopUpSection(popupSection); return value } return }; Section.updateSectionAppearanceSetting = (sectionId, appearanceValue = "always") => { var _a, _b; const pageId = getPageId(); const sectionElement = document.querySelector(`section[id='${sectionId}']`); const sectionPosition = sectionElement.getAttribute(positionAttribute); if (sectionPosition === "popup" || sectionPosition === "stick-top") { const currentAppearanceValue = (_b = (_a = Section.items[sectionPosition]) == null ? void 0 : _a.appearance) == null ? void 0 : _b.value; if (!currentAppearanceValue || currentAppearanceValue !== appearanceValue) { Section.items[sectionPosition].appearance = { value: appearanceValue, timeStamp: void 0, count: appearanceValue === "once" ? 0 : void 0 }; Section.items[sectionPosition].hidden = false; saveToLocalStorage(pageId); initUniquePositionSection(sectionElement, sectionPosition) } } }; Section.updatePageSectionsSelection = (sectionId, originalPosition, updatedPosition) => { var _a, _b; const pageId = getPageId(); const sectionElement = document.querySelector(`section[id='${sectionId}']`); if (originalPosition === "popup" && ((_a = Section.items.popup) == null ? void 0 : _a.sectionId) === sectionId) { const btn = sectionElement.getElementsByClassName("popup-section-close-btn"); sectionElement.removeChild(btn[0]); delete Section.items[originalPosition]; saveToLocalStorage(pageId) } else if (originalPosition === "stick-top" && ((_b = Section.items["stick-top"]) == null ? void 0 : _b.sectionId) === sectionId) { delete Section.items[originalPosition]; saveToLocalStorage(pageId); setStickTopHeight(0) } if (updatedPosition && updatedPosition !== "default") { Section.items = __spreadProps(__spreadValues({}, Section.items), { [updatedPosition]: { hidden: false, sectionId } }); saveToLocalStorage(pageId); if (updatedPosition === "stick-top") { setStickTopHeight(sectionElement == null ? void 0 : sectionElement.clientHeight) } } }; const getUtcDate = (date = new Date) => { const dateUtc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()); return dateUtc }; const saveToLocalStorage = (pageId, key = Section.localStorageKey) => { const sectionItems = __spreadValues(__spreadValues({}, Section.localStorageData), { [pageId]: Section.items }); const sectionItemsStr = JSON.stringify(sectionItems); localStorage.setItem(key, sectionItemsStr); if (Section.isFromEditor && Section.localStorageKeyProd) { localStorage.removeItem(Section.localStorageKeyProd) } }; const setStickTopHeight = height => { document.documentElement.style.setProperty("--stick-top-section-height", height + "px") }; const getSectionId = section => { const sectionId = section.getAttribute("id"); return sectionId }; const defaultPositionAppearance = sectionElement => { let sectionPopupAppearance = sectionElement.getAttribute("data-position-popup-appearance") || "always"; sectionPopupAppearance = sectionPopupAppearance === "always" || sectionPopupAppearance === "once" ? sectionPopupAppearance : Number(sectionPopupAppearance); const positionAppearanceObj = { value: sectionPopupAppearance, timeStamp: typeof sectionPopupAppearance === "number" ? getUtcDate() : void 0, count: sectionPopupAppearance === "once" ? 1 : void 0 }; return { appearance: positionAppearanceObj } }; const updateSectionPositionAppearance = (type, positionAppearanceObj, pageId, isUpdate) => { if (!Section.items[type].appearance) { Section.items[type] = __spreadValues(__spreadValues({}, Section.items[type]), positionAppearanceObj) } if (typeof Section.items[type].appearance.value === "number") { const currentUtcDate = getUtcDate(); if (!Section.items[type].appearance.timeStamp) { Section.items[type].appearance.timeStamp = currentUtcDate } const dif = currentUtcDate - (Section.items[type].appearance.timeStamp || 0); if (dif === 0 || dif !== currentUtcDate && dif >= Section.items[type].appearance.value * 36e5) { Section.items[type].appearance.timeStamp = getUtcDate(); Section.items[type].hidden = false } else { Section.items[type].hidden = true } } else if (Section.items[type].appearance.value === "once") { const prevCount = Section.items[type].appearance.count; Section.items[type].hidden = prevCount > 0; Section.items[type].appearance.count += 1 } else if (Section.items[type].appearance.value === "always" && !isUpdate) { Section.items[type].hidden = false } saveToLocalStorage(pageId) }; const initUniquePositionSection = (uniqueSection, type, isUpdate = false) => { var _a, _b; const pageId = getPageId(); const sectionId = getSectionId(uniqueSection); const sectionElement = document.querySelector(`section[id='${sectionId}']`); const positionAppearanceObj = defaultPositionAppearance(uniqueSection); if (!Section.items) { Section.items = { [type]: __spreadValues({ hidden: false, sectionId }, positionAppearanceObj) }; saveToLocalStorage(pageId) } else if (Section.items && (!Section.items[type] || ((_a = Section.items[type]) == null ? void 0 : _a.sectionId) !== sectionId)) { Section.items = __spreadProps(__spreadValues({}, Section.items), { [type]: __spreadValues({ hidden: false, sectionId }, positionAppearanceObj) }); saveToLocalStorage(pageId) } else if (Section.items && (Section.items[type] || ((_b = Section.items[type]) == null ? void 0 : _b.sectionId) === sectionId)) { updateSectionPositionAppearance(type, positionAppearanceObj, pageId, isUpdate) } if (type === "popup") { addCloseButton(uniqueSection) } else if (type === "stick-top") { setStickTopHeight(sectionElement == null ? void 0 : sectionElement.clientHeight) } if (Section.items[type].hidden) { sectionElement.classList.remove("show-section") } else { sectionElement.classList.add("show-section") } }; const getPageId = () => { const pageElement = document.querySelector(".page"); const pageId = pageElement.getAttribute("id"); return pageId }; const togglePopUpSection = popupSection => { var _a; const isDisplayNone = !((_a = popupSection == null ? void 0 : popupSection.classList) == null ? void 0 : _a.contains("show-section")); const pageId = getPageId(); if (isDisplayNone) { popupSection.classList.add("show-section"); Section.items["popup"].hidden = false } else { popupSection.classList.remove("show-section"); Section.items["popup"].hidden = true } saveToLocalStorage(pageId); return Section.items["popup"] }; const addCloseButton = popupSection => { let closeBtn = popupSection.querySelector(".popup-section-close-btn"); if (!closeBtn) { closeBtn = document.createElement("button"); closeBtn.classList.add("popup-section-close-btn"); closeBtn.onclick = function (e) { e.stopPropagation(); togglePopUpSection(popupSection) }; const closeBtnInner = document.createElement("div"); closeBtnInner.classList.add("popup-section-close-btn-inner"); closeBtn.appendChild(closeBtnInner); popupSection.appendChild(closeBtn) } }; window.Section = Section;
-	</script>
-	<script type="text/javascript">"use strict"; const Slideshow = { items: {} }; Slideshow.init = function ({ slideShowsSections = void 0, runFromEditor = false }) { if (document.readyState !== "complete") { window.addEventListener("load", () => { Slideshow.init({ slideShowsSections, runFromEditor }) }); return } if (slideShowsSections === void 0) { slideShowsSections = document.querySelectorAll("section[data-arranger='flex']") } let currentSlideShowsSectionsIds = {}; slideShowsSections.forEach(slideshow => { const slideshowId = slideshow.getAttribute("id"); const update = Slideshow.initSlideShowItem(slideshowId, slideshow, runFromEditor); currentSlideShowsSectionsIds[slideshowId] = slideshowId; slideshow.getAttribute("data-autoplay"); if (update) { const currentIndex = extractActiveDot(Slideshow.items[slideshowId].slideshow); if (currentIndex === -1) { Slideshow.showSlide({ slideShowData: Slideshow.items[slideshowId], runFromEditor }) } else { Slideshow.showSlide({ slideShowData: Slideshow.items[slideshowId], index: currentIndex, runFromEditor }) } } }); cleanup(currentSlideShowsSectionsIds) }; const cleanup = currentSlideShowsSectionsIds => { Object.keys(Slideshow.items).forEach(key => { if (key && !currentSlideShowsSectionsIds[key]) { if (Slideshow.items[key].reOrderObserver) { Slideshow.items[key].reOrderObserver.disconnect() } if (Slideshow.items[key].slideEffectObserver) { Slideshow.items[key].slideEffectObserver.disconnect() } delete Slideshow.items[key] } }) }; Slideshow.initSlideShowItem = function (slideshowId, slideshow, runFromEditor) { const slideEffectAnimation = querySelectSlideEffect(slideshow); const durationBetweenSlides = parseInt(slideshow.getAttribute("data-durationbetweenslides")) || 4; const doAutoplay = slideshow.getAttribute("data-autoplay") === "autoplay"; const pagination = generatePagination(slideshow, slideshowId); const arrowsColor = slideshow.getAttribute("data-arranger-arrows-color"); const arrows = slideshow.getAttribute("data-arranger-arrows-position"); let allSlides = querySelectSlides(slideshow); let sectionChildrenElement = slideshow.querySelector(".section-children"); Slideshow.items[slideshowId] = { slideEffectObserver: void 0, reOrderObserver: void 0, timeOutId: void 0, activeSlideIndex: void 0, prevActiveSlideIndex: void 0, isAutoPlay: !!(!runFromEditor && doAutoplay), animationDuration: durationBetweenSlides === 1 ? 500 : 1e3, slideshow, sectionChildrenElement, slideEffectAnimation, durationBetweenSlides, slides: allSlides, arrowsColor: arrowsColor || "255,255,255", arrows: arrows || "none" }; const slideArrows = generateSlideArrows(slideshow, Slideshow.items[slideshowId], runFromEditor); slideshow.style.setProperty("--slideshow-arrows-color", arrowsColor ? arrowsColor : "255,255,255"); addSlideEffectChangeObservable({ slideShowData: Slideshow.items[slideshowId], runFromEditor }); if (sectionChildrenElement) { addSectionChildrenElementObservable({ slideShowData: Slideshow.items[slideshowId], runFromEditor }) } let reUpdateSlides = false; if (allSlides.length > 1) { if (pagination) { Slideshow.items[slideshowId].slides.forEach((slide, index) => { let slideDot = generateSlideDot({ slideIndex: index, slideShowData: Slideshow.items[slideshowId], runFromEditor }); pagination.appendChild(slideDot) }); slideshow.appendChild(pagination); reUpdateSlides = true } let slideshowChildren = slideshow.querySelector(".children"); if (slideArrows && slideshowChildren && (arrows === "overlay" || arrows === "outside")) { slideshowChildren.appendChild(slideArrows); reUpdateSlides = true } } return reUpdateSlides }; Slideshow.showSlide = function ({ slideShowData, index, runFromEditor }) { slideShowData.slideEffectAnimation = querySelectSlideEffect(slideShowData.slideshow) || slideShowData.slideEffectAnimation; const { slideshow, slideEffectAnimation, slides, isAutoPlay } = slideShowData; if (index === void 0) { let activeDotIndex = extractActiveDot(slideshow); slideShowData.prevActiveSlideIndex = activeDotIndex; slideShowData.activeSlideIndex = getNextSlideIndex(activeDotIndex, slides) } else { slideShowData.prevActiveSlideIndex = slideShowData.activeSlideIndex; slideShowData.activeSlideIndex = index } let hasVisibleSlide = false; slides.forEach((slide, slideIndex) => { if (slideEffectAnimation) { slide.classList.add(slideEffectAnimation + "-animation"); if (slideEffectAnimation === "fade") { removeSlideAnimation(slideShowData, slideIndex); removeNoneAnimation(slideShowData, slideIndex); if (slide.classList.contains("prev-visible-slide")) { slide.classList.remove("prev-visible-slide"); slide.style.animationDuration = null } if (slide.classList.contains("visible-slide")) { hasVisibleSlide = true; slide.classList.remove("visible-slide"); slide.classList.add("prev-visible-slide"); slide.style.animationDuration = `${slideShowData.animationDuration}ms` } } if (slideEffectAnimation === "slide" || slideEffectAnimation === "none") { slide.style.animationDuration = null; removeFadeAnimation(slideShowData, slideIndex); if (slideEffectAnimation === "none") { removeSlideAnimation(slideShowData, index) } else { removeNoneAnimation(slideShowData, index) } slide.style.transform = "translateX(" + 100 * (0 - slideShowData.activeSlideIndex) + "%)" } } }); if (slideEffectAnimation === "fade") { if (hasVisibleSlide) { slides[slideShowData.activeSlideIndex].style.animationDuration = `${slideShowData.animationDuration}ms` } slides[slideShowData.activeSlideIndex].classList.add("visible-slide") } setActivePaginationDot({ slideshow, activeSlideIndex: slideShowData.activeSlideIndex }); if (isAutoPlay) { autoPlay(slideShowData, runFromEditor) } }; Slideshow.clearSlideShowFromSection = slideshowId => { var _a; const slideshowSection = document.querySelector(`section[id='${slideshowId}']`); if (slideshowSection) { const pagination = slideshowSection.querySelector(".pagination"); if (pagination) { slideshowSection.removeChild(pagination) } const slideshowArrows = slideshowSection.querySelector(".slide-arrows"); if (slideshowArrows) { (_a = slideshowSection.querySelector(".children")) == null ? void 0 : _a.removeChild(slideshowArrows) } } }; Slideshow.updateArrowsColor = (slideshowId, arrowsColor) => { const slideshowSection = document.querySelector(`section[id='${slideshowId}']`); slideshowSection.style.setProperty("--slideshow-arrows-color", arrowsColor) }; const extractActiveDot = slideshow => { let activeDot = slideshow.querySelector(".slide-dot.active"); let activeDotIndex = [...slideshow.querySelectorAll(".slide-dot")].indexOf(activeDot); return activeDotIndex }; const addSectionChildrenElementObservable = ({ slideShowData, runFromEditor }) => { var _a, _b; if (slideShowData.reOrderObserver) { slideShowData.reOrderObserver.disconnect() } if (runFromEditor) { slideShowData.sectionChildrenElement = ((_a = slideShowData == null ? void 0 : slideShowData.slideshow) == null ? void 0 : _a.querySelector(".section-children")) || slideShowData.sectionChildrenElement; slideShowData.reOrderObserver = new MutationObserver(mutationList => { var _a2; for (const mutation of mutationList) { if (mutation.type !== "childList") { return } const activeSlideIndex = getActiveSlideIndex(slideShowData); slideShowData.slides = querySelectSlides(slideShowData.slideshow) || slideShowData.slides; slideShowData.slides.forEach((slide, index) => { removeSlideAnimation(slideShowData, index); removeFadeAnimation(slideShowData, index); slide.classList.add("none-animation"); slide.style.transform = "translateX(" + 100 * (0 - activeSlideIndex) + "%)" }); if (slideShowData.slideEffectAnimation === "fade") { (_a2 = slideShowData.slides[activeSlideIndex]) == null ? void 0 : _a2.classList.add("visible-slide") } } }); (_b = slideShowData.reOrderObserver) == null ? void 0 : _b.observe(slideShowData.sectionChildrenElement, { childList: true }) } }; const addSlideEffectChangeObservable = ({ slideShowData, runFromEditor }) => { var _a; if (slideShowData.slideEffectObserver) { slideShowData.slideEffectObserver.disconnect() } if (runFromEditor) { slideShowData.slideEffectObserver = new MutationObserver(mutationList => { var _a2; for (const mutation of mutationList) { if (mutation.type !== "attributes" && mutation.attributeName !== "data-slide-effect") { return } const originalSlideEffect = slideShowData.slideEffectAnimation; const updatedSlideEffectAnimation = querySelectSlideEffect(slideShowData.slideshow); if (originalSlideEffect !== updatedSlideEffectAnimation) { slideShowData.slideEffectAnimation = updatedSlideEffectAnimation; const activeSlideIndex = getActiveSlideIndex(slideShowData); if (updatedSlideEffectAnimation === "fade") { (_a2 = slideShowData.slides[activeSlideIndex]) == null ? void 0 : _a2.classList.add("visible-slide") } else { slideShowData.slides.forEach((slide, index) => { removeSlideAnimation(slideShowData, index); removeFadeAnimation(slideShowData, index); slide.classList.add("none-animation"); slide.style.transform = "translateX(" + 100 * (0 - activeSlideIndex) + "%)" }) } } } }); (_a = slideShowData.slideEffectObserver) == null ? void 0 : _a.observe(slideShowData.slideshow, { attributes: true }) } }; const getActiveSlideIndex = slideShowData => { let activeDotIndex = slideShowData.activeSlideIndex; if (slideShowData.activeSlideIndex !== 0 && !slideShowData.activeSlideIndex) { activeDotIndex = extractActiveDot(slideShowData.slideshow) } return activeDotIndex >= 0 ? activeDotIndex : 0 }; const removeClassFromSlide = (slideShowData, index, classList = []) => { var _a; (_a = slideShowData == null ? void 0 : slideShowData.slides[index]) == null ? void 0 : _a.classList.remove(...classList) }; const removeSlideAnimation = (slideShowData, index) => { removeClassFromSlide(slideShowData, index, ["slide-animation"]) }; const removeNoneAnimation = (slideShowData, index) => { removeClassFromSlide(slideShowData, index, ["none-animation"]) }; const removeFadeAnimation = (slideShowData, index) => { removeClassFromSlide(slideShowData, index, ["fade-animation", "visible-slide", "prev-visible-slide"]) }; const querySelectSlides = slideshow => { const sectionChildren = slideshow.querySelector(".section-children"); return sectionChildren.querySelectorAll(":scope > article") }; const querySelectSlideEffect = slideshow => { const slideEffect = slideshow.getAttribute("data-slide-effect"); const slideEffectAnimation = slideEffect ? slideEffect == null ? void 0 : slideEffect.toLowerCase() : "slide"; return slideEffectAnimation }; const autoPlay = (slideShowData, runFromEditor) => { const { durationBetweenSlides } = slideShowData; clearAutorunTimeout(slideShowData); slideShowData.timeOutId = setTimeout(() => { Slideshow.showSlide({ slideShowData, runFromEditor }) }, durationBetweenSlides * 1e3) }; const generatePagination = (slideshow, slideshowId) => { let pagination = slideshow.querySelector(".pagination"); const sectionChildren = slideshow.querySelector(".section-children"); if (!!pagination) { if (pagination.querySelectorAll(".slide-dot").length === sectionChildren.querySelectorAll(":scope > article").length) { return false } slideshow.removeChild(pagination) } pagination = document.createElement("div"); pagination.classList.add("pagination"); return pagination }; const generateSlideDot = ({ slideIndex, slideShowData, runFromEditor }) => { let slideDot = document.createElement("div"); slideDot.classList.add("slide-dot"); slideDot.setAttribute("data-slide", slideIndex); slideDot.onclick = function (e) { e.stopPropagation(); const clickedSlideIndex = parseInt(this.getAttribute("data-slide")); clearAutorunTimeout(slideShowData); if ((clickedSlideIndex || clickedSlideIndex === 0) && (slideShowData == null ? void 0 : slideShowData.activeSlideIndex) === clickedSlideIndex) { return } slideShowData.isAutoPlay = false; Slideshow.showSlide({ index: clickedSlideIndex, slideShowData, runFromEditor }) }; return slideDot }; const generateSlideArrows = (slideshowSection, slideShowData, runFromEditor) => { const arrowOnClick = arrowSide => { return e => { var _a; e.preventDefault(); e.stopPropagation(); const totalSlides = (_a = slideShowData == null ? void 0 : slideShowData.slides) == null ? void 0 : _a.length; if (totalSlides && Number.isInteger(totalSlides) && totalSlides > 1) { const activeSlideIndex = getActiveSlideIndex(slideShowData); let nextIndex = 0; if (arrowSide === "left") { nextIndex = getPrevSlideIndex(activeSlideIndex, slideShowData.slides) } else if (arrowSide === "right") { nextIndex = getNextSlideIndex(activeSlideIndex, slideShowData.slides) } Slideshow.showSlide({ index: nextIndex, slideShowData, runFromEditor }) } } }; let slideshowArrows = slideshowSection == null ? void 0 : slideshowSection.querySelector(".slide-arrows"); const slideshowSectionChildren = slideshowSection == null ? void 0 : slideshowSection.querySelector(".section-children"); if (!!slideshowArrows) { if (slideshowSectionChildren.querySelectorAll(":scope > article").length > 1) { return false } slideshowSection.querySelector(".children").removeChild(slideshowArrows) } let slideArrows = document.createElement("div"); slideArrows.classList.add("slide-arrows"); let slideLeftArrow = document.createElement("button"); slideLeftArrow.classList.add("left-arrow"); slideLeftArrow.onclick = arrowOnClick("left"); slideLeftArrow.appendChild(window.createArrowSvg()); let slideRightArrow = document.createElement("button"); slideRightArrow.classList.add("right-arrow"); slideRightArrow.onclick = arrowOnClick("right"); slideRightArrow.appendChild(window.createArrowSvg()); slideArrows.append(slideLeftArrow, slideRightArrow); return slideArrows }; const clearAutorunTimeout = slideShowData => { if (slideShowData == null ? void 0 : slideShowData.timeOutId) { clearTimeout(slideShowData.timeOutId); slideShowData.timeOutId = void 0 } }; const getNextSlideIndex = (currentIndex, list = []) => { return currentIndex + 1 > list.length - 1 ? 0 : currentIndex + 1 }; const getPrevSlideIndex = (currentIndex, list = []) => { return currentIndex - 1 < 0 ? list.length - 1 : currentIndex - 1 }; const setActivePaginationDot = ({ slideshow, activeSlideIndex }) => { const hasPagination = !!slideshow.querySelector(".pagination"); if (hasPagination) { let activeDot = slideshow.querySelector(".slide-dot.active"); const hasActiveDot = !!activeDot; if (hasActiveDot) { activeDot.classList.remove("active") } slideshow.querySelectorAll(".slide-dot")[activeSlideIndex].classList.add("active") } }; window.Slideshow = Slideshow;
-	</script>
-	<script type="text/javascript">"use strict"; const Pagination = {}; Pagination.init = function (sections, forceClear) { if (section === void 0) { sections = document.querySelectorAll("section[data-arranger='matrix']") } for (var idx = 0; idx < sections.length; idx++) { var section = sections[idx]; Pagination.initPagination(section, forceClear) } }; Pagination.initPagination = function (section, forceClear) { let pagination = section.getAttribute("data-pagination"); let paginationvariant = section.getAttribute("data-paginationvariant"); let paginationbuttontext = section.getAttribute("data-paginationbuttontext"); let paginationtype = section.getAttribute("data-paginationtype"); let paginationvisiblelines = parseInt(section.getAttribute("data-paginationvisiblelines")); let arrangerCols = parseInt(section.getAttribute("data-arrangergallerycols")); let arrangerGallerySpacing = parseInt(section.getAttribute("data-arrangergalleryspacing")); let articles = Array.from(section.querySelectorAll("article")); let container = section.querySelector(".gallery-pagination"); let childrenContainer = section.querySelector(".section-children"); if (forceClear && !!container && !!container.parentNode) { container.parentNode.removeChild(container); container = null } if (!pagination && !!container) { section.removeChild(container); return false } else if (!container) { container = document.createElement("div"); childrenContainer.appendChild(container); container.classList.add("gallery-pagination") } if (!!container && !!articles && pagination === "break" && paginationtype === "show_more_button") { var showMoreButton = container.querySelector(".pagination-more-button"); if (articles.filter(article => article.classList.contains("hidden")).length > 0) { if (!showMoreButton) { showMoreButton = document.createElement("div"); showMoreButton.classList.add("pagination-more-button"); showMoreButton.classList.add(paginationvariant); showMoreButton.innerText = paginationbuttontext; showMoreButton.onclick = function (e) { e.stopPropagation(); var hiddenItems = articles.filter(article => article.classList.contains("hidden")); hiddenItems.slice(0, paginationvisiblelines * arrangerCols).map(_ => _.classList.remove("hidden")); if (articles.filter(article => article.classList.contains("hidden")).length === 0) { container.removeChild(showMoreButton) } }; container.appendChild(showMoreButton) } showMoreButton.style.left = "-" + (arrangerGallerySpacing || 0) / 2 + "px" } else { if (!!container && !!showMoreButton) { container.removeChild(showMoreButton) } } } }; window.Pagination = Pagination;
-	</script>
-	<script type="text/javascript">"use strict";/*! odometer 0.4.6 */(function () { var a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G = [].slice; q = '<span class="odometer-value"></span>', n = '<span class="odometer-ribbon"><span class="odometer-ribbon-inner">' + q + "</span></span>", d = '<span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner">' + n + "</span></span>", g = '<span class="odometer-formatting-mark"></span>', c = "(,ddd).dd", h = /^\(?([^)]*)\)?(?:(.)(d+))?$/, i = 30, f = 2e3, a = 20, j = 2, e = .5, k = 1e3 / i, b = 1e3 / a, o = "transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd", y = document.createElement("div").style, p = null != y.transition || null != y.webkitTransition || null != y.mozTransition || null != y.oTransition, w = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, l = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver, s = function (a2) { var b2; return b2 = document.createElement("div"), b2.innerHTML = a2, b2.children[0] }, v = function (a2, b2) { return a2.className = a2.className.replace(new RegExp("(^| )" + b2.split(" ").join("|") + "( |$)", "gi"), " ") }, r = function (a2, b2) { return v(a2, b2), a2.className += " " + b2 }, z = function (a2, b2) { var c2; return null != document.createEvent ? (c2 = document.createEvent("HTMLEvents"), c2.initEvent(b2, true, true), a2.dispatchEvent(c2)) : void 0 }, u = function () { var a2, b2; return null != (a2 = null != (b2 = window.performance) ? "function" == typeof b2.now ? b2.now() : void 0 : void 0) ? a2 : +new Date }, x = function (a2, b2) { return null == b2 && (b2 = 0), b2 ? (a2 *= Math.pow(10, b2), a2 += .5, a2 = Math.floor(a2), a2 /= Math.pow(10, b2)) : Math.round(a2) }, A = function (a2) { return 0 > a2 ? Math.ceil(a2) : Math.floor(a2) }, t = function (a2) { return a2 - x(a2) }, C = false, (B = function () { var a2, b2, c2, d2, e2; if (!C && null != window.jQuery) { for (C = true, d2 = ["html", "text"], e2 = [], b2 = 0, c2 = d2.length; c2 > b2; b2++)a2 = d2[b2], e2.push(function (a3) { var b3; return b3 = window.jQuery.fn[a3], window.jQuery.fn[a3] = function (a4) { var c3; return null == a4 || null == (null != (c3 = this[0]) ? c3.odometer : void 0) ? b3.apply(this, arguments) : this[0].odometer.update(a4) } }(a2)); return e2 } })(), setTimeout(B, 0), m = function () { function a2(b2) { var c2, d2, e2, g2, h2, i2, l2, m2, n2, o2, p2 = this; if (this.options = b2, this.el = this.options.el, null != this.el.odometer) return this.el.odometer; this.el.odometer = this, m2 = a2.options; for (d2 in m2) g2 = m2[d2], null == this.options[d2] && (this.options[d2] = g2); null == (h2 = this.options).duration && (h2.duration = f), this.MAX_VALUES = this.options.duration / k / j | 0, this.resetFormat(), this.value = this.cleanValue(null != (n2 = this.options.value) ? n2 : ""), this.renderInside(), this.render(); try { for (o2 = ["innerHTML", "innerText", "textContent"], i2 = 0, l2 = o2.length; l2 > i2; i2++)e2 = o2[i2], null != this.el[e2] && !function (a3) { return Object.defineProperty(p2.el, a3, { get: function () { var b3; return "innerHTML" === a3 ? p2.inside.outerHTML : null != (b3 = p2.inside.innerText) ? b3 : p2.inside.textContent }, set: function (a4) { return p2.update(a4) } }) }(e2) } catch (q2) { c2 = q2, this.watchForMutations() } } return a2.prototype.renderInside = function () { return this.inside = document.createElement("div"), this.inside.className = "odometer-inside", this.el.innerHTML = "", this.el.appendChild(this.inside) }, a2.prototype.watchForMutations = function () { var a3, b2 = this; if (null != l) try { return null == this.observer && (this.observer = new l(function () { var a4; return a4 = b2.el.innerText, b2.renderInside(), b2.render(b2.value), b2.update(a4) })), this.watchMutations = true, this.startWatchingMutations() } catch (c2) { a3 = c2 } }, a2.prototype.startWatchingMutations = function () { return this.watchMutations ? this.observer.observe(this.el, { childList: true }) : void 0 }, a2.prototype.stopWatchingMutations = function () { var a3; return null != (a3 = this.observer) ? a3.disconnect() : void 0 }, a2.prototype.cleanValue = function (a3) { var b2; return "string" == typeof a3 && (a3 = a3.replace(null != (b2 = this.format.radix) ? b2 : ".", "<radix>"), a3 = a3.replace(/[.,]/g, ""), a3 = a3.replace("<radix>", "."), a3 = parseFloat(a3, 10) || 0), x(a3, this.format.precision) }, a2.prototype.bindTransitionEnd = function () { var a3, b2, c2, d2, e2, f2, g2 = this; if (!this.transitionEndBound) { for (this.transitionEndBound = true, b2 = false, e2 = o.split(" "), f2 = [], c2 = 0, d2 = e2.length; d2 > c2; c2++)a3 = e2[c2], f2.push(this.el.addEventListener(a3, function () { return b2 ? true : (b2 = true, setTimeout(function () { return g2.render(), b2 = false, z(g2.el, "odometerdone") }, 0), true) }, false)); return f2 } }, a2.prototype.resetFormat = function () { var a3, b2, d2, e2, f2, g2, i2, j2; if (a3 = null != (i2 = this.options.format) ? i2 : c, a3 || (a3 = "d"), d2 = h.exec(a3), !d2) throw new Error("Odometer: Unparsable digit format"); return j2 = d2.slice(1, 4), g2 = j2[0], f2 = j2[1], b2 = j2[2], e2 = (null != b2 ? b2.length : void 0) || 0, this.format = { repeating: g2, radix: f2, precision: e2 } }, a2.prototype.render = function (a3) { var b2, c2, d2, e2, f2, g2, h2, i2, j2, k2, l2, m2; for (null == a3 && (a3 = this.value), this.stopWatchingMutations(), this.resetFormat(), this.inside.innerHTML = "", g2 = this.options.theme, b2 = this.el.className.split(" "), f2 = [], i2 = 0, k2 = b2.length; k2 > i2; i2++)c2 = b2[i2], c2.length && ((e2 = /^odometer-theme-(.+)$/.exec(c2)) ? g2 = e2[1] : /^odometer(-|$)/.test(c2) || f2.push(c2)); for (f2.push("odometer"), p || f2.push("odometer-no-transitions"), f2.push(g2 ? "odometer-theme-" + g2 : "odometer-auto-theme"), this.el.className = f2.join(" "), this.ribbons = {}, this.digits = [], h2 = !this.format.precision || !t(a3) || false, m2 = a3.toString().split("").reverse(), j2 = 0, l2 = m2.length; l2 > j2; j2++)d2 = m2[j2], "." === d2 && (h2 = true), this.addDigit(d2, h2); return this.startWatchingMutations() }, a2.prototype.update = function (a3) { var b2, c2 = this; return a3 = this.cleanValue(a3), (b2 = a3 - this.value) ? (v(this.el, "odometer-animating-up odometer-animating-down odometer-animating"), b2 > 0 ? r(this.el, "odometer-animating-up") : r(this.el, "odometer-animating-down"), this.stopWatchingMutations(), this.animate(a3), this.startWatchingMutations(), setTimeout(function () { return c2.el.offsetHeight, r(c2.el, "odometer-animating") }, 0), this.value = a3) : void 0 }, a2.prototype.renderDigit = function () { return s(d) }, a2.prototype.insertDigit = function (a3, b2) { return null != b2 ? this.inside.insertBefore(a3, b2) : this.inside.children.length ? this.inside.insertBefore(a3, this.inside.children[0]) : this.inside.appendChild(a3) }, a2.prototype.addSpacer = function (a3, b2, c2) { var d2; return d2 = s(g), d2.innerHTML = a3, c2 && r(d2, c2), this.insertDigit(d2, b2) }, a2.prototype.addDigit = function (a3, b2) { var c2, d2, e2, f2; if (null == b2 && (b2 = true), "-" === a3) return this.addSpacer(a3, null, "odometer-negation-mark"); if ("." === a3) return this.addSpacer(null != (f2 = this.format.radix) ? f2 : ".", null, "odometer-radix-mark"); if (b2) for (e2 = false; ;) { if (!this.format.repeating.length) { if (e2) throw new Error("Bad odometer format without digits"); this.resetFormat(), e2 = true } if (c2 = this.format.repeating[this.format.repeating.length - 1], this.format.repeating = this.format.repeating.substring(0, this.format.repeating.length - 1), "d" === c2) break; this.addSpacer(c2) } return d2 = this.renderDigit(), d2.querySelector(".odometer-value").innerHTML = a3, this.digits.push(d2), this.insertDigit(d2) }, a2.prototype.animate = function (a3) { return p && "count" !== this.options.animation ? this.animateSlide(a3) : this.animateCount(a3) }, a2.prototype.animateCount = function (a3) { var c2, d2, e2, f2, g2, h2 = this; if (d2 = +a3 - this.value) return f2 = e2 = u(), c2 = this.value, (g2 = function () { var i2, j2, k2; return u() - f2 > h2.options.duration ? (h2.value = a3, h2.render(), void z(h2.el, "odometerdone")) : (i2 = u() - e2, i2 > b && (e2 = u(), k2 = i2 / h2.options.duration, j2 = d2 * k2, c2 += j2, h2.render(Math.round(c2))), null != w ? w(g2) : setTimeout(g2, b)) })() }, a2.prototype.getDigitCount = function () { var a3, b2, c2, d2, e2, f2; for (d2 = 1 <= arguments.length ? G.call(arguments, 0) : [], a3 = e2 = 0, f2 = d2.length; f2 > e2; a3 = ++e2)c2 = d2[a3], d2[a3] = Math.abs(c2); return b2 = Math.max.apply(Math, d2), Math.ceil(Math.log(b2 + 1) / Math.log(10)) }, a2.prototype.getFractionalDigitCount = function () { var a3, b2, c2, d2, e2, f2, g2; for (e2 = 1 <= arguments.length ? G.call(arguments, 0) : [], b2 = /^\-?\d*\.(\d*?)0*$/, a3 = f2 = 0, g2 = e2.length; g2 > f2; a3 = ++f2)d2 = e2[a3], e2[a3] = d2.toString(), c2 = b2.exec(e2[a3]), e2[a3] = null == c2 ? 0 : c2[1].length; return Math.max.apply(Math, e2) }, a2.prototype.resetDigits = function () { return this.digits = [], this.ribbons = [], this.inside.innerHTML = "", this.resetFormat() }, a2.prototype.animateSlide = function (a3) { var b2, c2, d2, f2, g2, h2, i2, j2, k2, l2, m2, n2, o2, p2, q2, s2, t2, u2, v2, w2, x2, y2, z2, B2, C2, D2, E2; if (s2 = this.value, j2 = this.getFractionalDigitCount(s2, a3), j2 && (a3 *= Math.pow(10, j2), s2 *= Math.pow(10, j2)), d2 = a3 - s2) { for (this.bindTransitionEnd(), f2 = this.getDigitCount(s2, a3), g2 = [], b2 = 0, m2 = v2 = 0; f2 >= 0 ? f2 > v2 : v2 > f2; m2 = f2 >= 0 ? ++v2 : --v2) { if (t2 = A(s2 / Math.pow(10, f2 - m2 - 1)), i2 = A(a3 / Math.pow(10, f2 - m2 - 1)), h2 = i2 - t2, Math.abs(h2) > this.MAX_VALUES) { for (l2 = [], n2 = h2 / (this.MAX_VALUES + this.MAX_VALUES * b2 * e), c2 = t2; h2 > 0 && i2 > c2 || 0 > h2 && c2 > i2;)l2.push(Math.round(c2)), c2 += n2; l2[l2.length - 1] !== i2 && l2.push(i2), b2++ } else l2 = function () { E2 = []; for (var a4 = t2; i2 >= t2 ? i2 >= a4 : a4 >= i2; i2 >= t2 ? a4++ : a4--)E2.push(a4); return E2 }.apply(this); for (m2 = w2 = 0, y2 = l2.length; y2 > w2; m2 = ++w2)k2 = l2[m2], l2[m2] = Math.abs(k2 % 10); g2.push(l2) } for (this.resetDigits(), D2 = g2.reverse(), m2 = x2 = 0, z2 = D2.length; z2 > x2; m2 = ++x2)for (l2 = D2[m2], this.digits[m2] || this.addDigit(" ", m2 >= j2), null == (u2 = this.ribbons)[m2] && (u2[m2] = this.digits[m2].querySelector(".odometer-ribbon-inner")), this.ribbons[m2].innerHTML = "", 0 > d2 && (l2 = l2.reverse()), o2 = C2 = 0, B2 = l2.length; B2 > C2; o2 = ++C2)k2 = l2[o2], q2 = document.createElement("div"), q2.className = "odometer-value", q2.innerHTML = k2, this.ribbons[m2].appendChild(q2), o2 === l2.length - 1 && r(q2, "odometer-last-value"), 0 === o2 && r(q2, "odometer-first-value"); return 0 > t2 && this.addDigit("-"), p2 = this.inside.querySelector(".odometer-radix-mark"), null != p2 && p2.parent.removeChild(p2), j2 ? this.addSpacer(this.format.radix, this.digits[j2 - 1], "odometer-radix-mark") : void 0 } }, a2 }(), m.options = null != (E = window.odometerOptions) ? E : {}, setTimeout(function () { var a2, b2, c2, d2, e2; if (window.odometerOptions) { d2 = window.odometerOptions, e2 = []; for (a2 in d2) b2 = d2[a2], e2.push(null != (c2 = m.options)[a2] ? (c2 = m.options)[a2] : c2[a2] = b2); return e2 } }, 0), m.init = function () { var a2, b2, c2, d2, e2, f2; if (null != document.querySelectorAll) { for (b2 = document.querySelectorAll(m.options.selector || ".odometer"), f2 = [], c2 = 0, d2 = b2.length; d2 > c2; c2++)a2 = b2[c2], f2.push(a2.odometer = new m({ el: a2, value: null != (e2 = a2.innerText) ? e2 : a2.textContent })); return f2 } }, null != (null != (F = document.documentElement) ? F.doScroll : void 0) && null != document.createEventObject ? (D = document.onreadystatechange, document.onreadystatechange = function () { return "complete" === document.readyState && m.options.auto !== false && m.init(), null != D ? D.apply(this, arguments) : void 0 }) : document.addEventListener("DOMContentLoaded", function () { return m.options.auto !== false ? m.init() : void 0 }, false), "function" == typeof define && define.amd ? define(["jquery"], function () { return m }) : typeof exports === false ? module.exports = m : window.Odometer = m }).call(this);
-	</script>
-
-
-
-	<script type="text/javascript">"use strict"; const Anchor = { sessionStorageKey: "SCROLL_TO_SECTION_OP_PAGE_LOAD" }; const handleAnchorClick = (sectionId, pageId, href, position) => { const currentPage = document.querySelector("div.page"); const currentPageId = (currentPage == null ? void 0 : currentPage.getAttribute("id")) || ""; if (`/${currentPageId}` === pageId) { if (sectionId) { closeMobileMenu(); const scrollToSection = document == null ? void 0 : document.querySelector(`section[id='${sectionId}']`); scrollToSection.style.scrollMarginTop = "calc(var(--menu-height) * -1 + var(--stick-top-section-height))"; scrollToSection.style.overflow = "initial"; scrollToSection == null ? void 0 : scrollToSection.scrollIntoView({ behavior: "smooth", block: position || "nearest", inline: "nearest" }) } } else { sessionStorage.setItem(Anchor.sessionStorageKey, JSON.stringify({ sectionId, pageId, href, position })); if (window == null ? void 0 : window.location) { window.location.href = `${href}` } } }; const closeMobileMenu = () => { var _a, _b; const websiteRoot = document.querySelector(".website"); const isShowMenu = (_a = websiteRoot == null ? void 0 : websiteRoot.classList) == null ? void 0 : _a.contains("show-menu"); if (isShowMenu) { (_b = websiteRoot.classList) == null ? void 0 : _b.remove("show-menu") } }; const addAnchorToElement = () => { const anchorElement = document.querySelectorAll('[data-item-type="ANCHOR"]'); if (anchorElement) { anchorElement.forEach(element => { const scrollToSectionId = element.getAttribute("data-section-id"); const scrollToSectionPageId = element.getAttribute("data-page-id"); const scrollToSectionHref = element.getAttribute("data-item-href"); const scrollToSectionPosition = element.getAttribute("data-section-position"); if (scrollToSectionId) { element.onclick = function (event) { event.preventDefault(); handleAnchorClick(scrollToSectionId, scrollToSectionPageId, scrollToSectionHref, scrollToSectionPosition) } } }) } const scrollToData = sessionStorage.getItem(Anchor.sessionStorageKey); sessionStorage.removeItem(Anchor.sessionStorageKey); if (scrollToData) { const data = JSON.parse(scrollToData); if (data.sectionId && data.pageId && data.href && data.position) { handleAnchorClick(data.sectionId, data.pageId, data.href, data.position) } } }; Anchor.init = () => { addAnchorToElement() }; window.Anchor = Anchor;
-	</script>
-	<script>
-		const addScriptAtBottom = (src) => {
-			const script = document.createElement('script');
-
-			script.type = 'text/javascript';
-			script.src = src;
-			script.defer = true;
-			document.body.appendChild(script);
-		};
-
-		window.addScriptAtBottom = addScriptAtBottom;
-
-		// lazy image loading
-		window.onload = function () {
-
-			Effects.init();
-			Clamping.init();
-			Slideshow.init({ slideShowsSections: undefined, runFromEditor: false });
-			Pagination.init();
-			Section.init(false)
-			Menu.init();
-
-			Anchor.init();
-
-			let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-			if ("IntersectionObserver" in window) {
-				let lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
-					entries.forEach(function (video) {
-						if (video.isIntersecting) {
-							for (var source in video.target.children) {
-								let videoSource = video.target.children[source];
-								if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-									videoSource.src = videoSource.dataset.src;
-								}
-							}
-
-							video.target.load();
-							video.target.classList.remove("lazy");
-							if (video.target.autoplay) {
-								video.target.play();
-							}
-							lazyVideoObserver.unobserve(video.target);
+						.website[data-menuposition=top_menu_fixed][menu-collapse=true] .top_menu,
+						.website[data-menuposition=simple_menu] .top_menu {
+							position: relative;
+							background-color: white !important;
+							color: black;
+							flex-wrap: wrap;
+							padding-left: 0;
+							padding-right: 0
 						}
-					});
-				});
+				
+						.website[data-menuposition=simple_menu] .top_menu {
+							margin-top: var(--stick-top-section-height)
+						}
+						
 
-				lazyVideos.forEach(function (lazyVideo) {
-					lazyVideoObserver.observe(lazyVideo);
-				});
-			} else {
-				// Possibly fall back to a more compatible method here
-			}
-
-			const loopVideos = [].slice.call(document.querySelectorAll('video[loop]'));
-			loopVideos.map(videoEl => {
-				videoEl.addEventListener('timeupdate', (event) => {
-					if (event.target.duration - event.target.currentTime < 0.5) {
-						event.target.load();
-					}
-				});
-			})
-		}
-		// lazy image loading END
-		// custom mapped event trigger START
-		window.triggerCustomEvent = function (callParameter, itemData) {
-			window.dispatchEvent(new CustomEvent('actionCall', { detail: { callParameter: callParameter, itemData: itemData } }));
-		}
-						// custom mapped event trigger  END
-	</script>
-
-</head>
-
-<body>
-
-	<div class="website" id="vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published-PAGES" data-cloaking="false"
-		data-menuposition="top_menu_fixed" data-footerposition="horizontal_footer" data-menulogovisiblemobile="false">
-
-		<style>
-			:root {
-				--theme-color-1: rgb(43, 44, 46);
-				--theme-color-1-rgbv: 255, 255, 255;
-				--theme-color-btn-rgbv: 34, 196, 205;
-				--theme-color-1-dark: rgb(34, 35, 36);
-				--theme-color-1-dark-rgbv: 255, 255, 255;
-				--theme-color-1-light: rgb(85, 86, 87);
-				--theme-color-1-light-rgbv: 85, 86, 87;
-				--theme-color-2: rgb(255, 255, 255);
-				--theme-color-2-rgbv: 255, 255, 255;
-				--theme-color-2-dark: rgb(204, 204, 204);
-				--theme-color-2-dark-rgbv: 204, 204, 204;
-				--theme-color-2-light: rgb(255, 255, 255);
-				--theme-color-2-light-rgbv: 255, 255, 255;
-				--theme-color-3: rgb(43, 44, 46);
-				--theme-color-3-rgbv: 43, 44, 46;
-				--theme-color-3-dark: rgb(34, 35, 36);
-				--theme-color-3-dark-rgbv: 34, 35, 36;
-				--theme-color-3-light: rgb(85, 86, 87);
-				--theme-color-3-light-rgbv: 85, 86, 87;
-				--theme-color-4: rgb(34, 196, 205);
-				--theme-color-4-rgbv: 0, 78, 99;
-				--theme-color-4-dark: rgb(122, 132, 157);
-				--theme-color-4-dark-rgbv: 122, 132, 157;
-				--theme-color-4-light: rgb(173, 183, 208);
-				--theme-color-4-light-rgbv: 173, 183, 208;
-				--theme-color-5: rgb(243, 243, 240);
-				--theme-color-5-rgbv: 243, 243, 240;
-				--theme-color-5-dark: rgb(194, 194, 192);
-				--theme-color-5-dark-rgbv: 194, 194, 192;
-				--theme-color-5-light: rgb(245, 245, 243);
-				--theme-color-5-light-rgbv: 245, 245, 243;
-				--theme-color-6: rgb(14, 14, 14);
-				--theme-color-6-rgbv: 14, 14, 14;
-				--theme-color-6-dark: rgb(11, 11, 11);
-				--theme-color-6-dark-rgbv: 11, 11, 11;
-				--theme-color-6-light: rgb(62, 62, 62);
-				--theme-color-6-light-rgbv: 62, 62, 62;
-			}
-
-			:root {
-				--button-color-preset-1-color: rgba(var(--theme-color-2-rgbv), 1);
-				--button-color-preset-1-background-hover-color: rgba(var(--theme-color-2-rgbv), 1);
-				--button-color-preset-1-background-color: transparent;
-				--button-color-preset-1-border-color: rgba(var(--theme-color-2-rgbv), 1);
-				--button-color-preset-1-hover-color: rgba(var(--theme-color-btn-rgbv), 1);
-				--button-color-preset-2-color: rgba(var(--theme-color-2-rgbv), 1);
-				--button-color-preset-2-background-hover-color: rgba(var(--theme-color-4-light-rgbv), 1);
-				--button-color-preset-2-background-color: rgba(var(--theme-color-btn-rgbv), 1);
-				--button-color-preset-2-border-color: transparent;
-				--button-color-preset-2-hover-color: rgba(var(--theme-color-1-dark-rgbv), 1);
-				--button-color-preset-3-color: var(--theme-color-3);
-				--button-color-preset-3-background-hover-color: var(--theme-color-4);
-				--button-color-preset-3-background-color: var(--theme-color-4);
-				--button-color-preset-3-border-color: var(--theme-color-3);
-				--button-color-preset-3-hover-color: var(--theme-color-3);
-			}
-
-			body {
-				background-color: inherit
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .title_preset_1 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 2.5rem;
-				font-family: Montserrat;
-				font-weight: 600;
-				font-style: normal;
-				letter-spacing: 0em;
-				line-height: 1.2em;
-				padding: 0px;
-				text-transform: none
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .title_preset_2 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 3.3333333333333335rem;
-				font-family: Montserrat;
-				font-weight: 600;
-				font-style: normal;
-				letter-spacing: 0.15em;
-				line-height: 1.2em;
-				padding: 0px;
-				text-transform: uppercase
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .title_preset_3 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 1.6666666666666667rem;
-				font-family: Montserrat;
-				font-weight: 600;
-				font-style: normal;
-				letter-spacing: 0em;
-				line-height: 1.2em;
-				padding: 0px;
-				text-transform: none
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .subtitle_preset_1 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 1.6666666666666667rem;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: -0.02em;
-				line-height: 1.6em;
-				padding: 0px;
-				text-transform: none
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .subtitle_preset_2 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 1.5rem;
-				font-family: Montserrat;
-				font-weight: 500;
-				font-style: normal;
-				letter-spacing: 0.05em;
-				line-height: 1.6em;
-				padding: 0px;
-				text-transform: uppercase
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .subtitle_preset_3 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 1.3333333333333333rem;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: 0.1em;
-				line-height: 1.6em;
-				padding: 0px;
-				text-transform: uppercase
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .body_preset_1 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 14px;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: 0em;
-				line-height: 2em;
-				padding: 0px;
-				text-transform: none
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .body_preset_2 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 14px;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: 0em;
-				line-height: 2em;
-				padding: 0px;
-				text-transform: none
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .body_preset_3 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 10px;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: 0em;
-				line-height: 2em;
-				padding: 0px;
-				text-transform: none
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .button_preset_1 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 12px;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: 0.15em;
-				line-height: 1.6em;
-				padding: 0px;
-				text-transform: uppercase
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .button_preset_2 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 12px;
-				font-family: Montserrat;
-				font-weight: 400;
-				font-style: normal;
-				letter-spacing: 0.15em;
-				line-height: 1.6em;
-				padding: 0px;
-				text-transform: uppercase
-			}
-
-			#vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published .button_preset_3 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-size: 12px;
-				font-family: Montserrat;
-				font-weight: 500;
-				font-style: normal;
-				letter-spacing: 0.15em;
-				line-height: 1.6em;
-				padding: 0px;
-				text-transform: uppercase
-			}
-		</style>
-		<div class="page" id="vbid-73adbedb-ee33-484f-90c6-0cbedeca39ea-published">
-			<div class="children">
-				<menu class="top_menu" data-sbid="sbid-dd1c8a5c-4bac-4ca6-a02b-9bdc393f1ecf"
-					id="vbid-80607789-a66f-4412-bdd1-645356cdbeab">
-
-					<style>
+						.website[data-menuposition=top_menu_fixed][menu-collapse=true] .top_menu {
+							position: fixed
+						}
 						#vbid-80607789-a66f-4412-bdd1-645356cdbeab article.section-item {
 							background-color: rgba(244, 203, 74, 0)
 						}
@@ -5514,31 +5516,32 @@ body {
 						<li class="main-links button_preset_2"><span class="menu-parent"><span
 									class="expand-icon"></span><a style="width:inherit" href="providers.html"
 									target="_self">Provider</a></span></li>
-						<li class="main-links menu-closed button_preset_2"><span class="menu-parent"><span
-									class="expand-icon"></span><a style="width:inherit" href="services.html"
-									target="_self">Services</a></span>
-							<ul class="submenu">
-								<li class="button_preset_2"><a style="width:inherit"
-										href="service/plantar-fasciitis.html" target="_self"><span
-											class="menu-child">Plantar Fasciitis</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit"
-										href="service/diabetic-footcare.html" target="_self"><span
-											class="menu-child">Diabetic Footcare</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit" href="service/ankle-sprain.html"
-										target="_self"><span class="menu-child">Ankle Sprain</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit" href="service/orthotics.html"
-										target="_self"><span class="menu-child">Orthotics</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit" href="service/bunions.html"
-										target="_self"><span class="menu-child">Bunions</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit" href="service/ingrown-toenail.html"
-										target="_self"><span class="menu-child">Ingrown Toenail</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit" href="service/gout.html"
-										target="_self"><span class="menu-child">Gout</span></a></li>
-								<li class="button_preset_2"><a style="width:inherit"
-										href="service/restorative-medicine.html" target="_self"><span
-											class="menu-child">Restorative Medicine</span></a></li>
-							</ul>
-						</li>
+						
+									<li class="main-links menu-closed button_preset_2"><span class="menu-parent"><span
+										class="expand-icon"></span><a style="width:inherit" href="services.html"
+										target="_self">Services</a></span>
+								<ul class="submenu">
+									<li class="button_preset_2"><a style="width:inherit"
+											href="service/plantar-fasciitis.html" target="_self"><span
+												class="menu-child">Plantar Fasciitis</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit"
+											href="service/diabetic-footcare.html" target="_self"><span
+												class="menu-child">Diabetic Footcare</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit" href="service/ankle-sprain.html"
+											target="_self"><span class="menu-child">Ankle Sprain</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit" href="service/orthotics.html"
+											target="_self"><span class="menu-child">Orthotics</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit" href="service/bunions.html"
+											target="_self"><span class="menu-child">Bunions</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit" href="service/ingrown-toenail.html"
+											target="_self"><span class="menu-child">Ingrown Toenail</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit" href="service/gout.html"
+											target="_self"><span class="menu-child">Gout</span></a></li>
+									<li class="button_preset_2"><a style="width:inherit"
+											href="service/restorative-medicine.html" target="_self"><span
+												class="menu-child">Restorative Medicine</span></a></li>
+								</ul>
+							</li>
 						<li class="main-links button_preset_2"><span class="menu-parent"><span
 									class="expand-icon"></span><a style="width:inherit" href="testimonials.html"
 									target="_self">Testimonials</a></span></li>
