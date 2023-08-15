@@ -3956,6 +3956,30 @@ body {
 					id="vbid-80607789-a66f-4412-bdd1-645356cdbeab">
 
 					<style>
+						.website .top_menu {
+							--menu-background-color: rgba(var(--theme-color-1-rgbv), 1);
+							--menu-background-secondary-color: rgba(var(--theme-color-2-rgbv), 1);
+							--menu-background-accent-color: rgba(var(--theme-color-3-rgbv), 1);
+							--menu-background-mobile-color: var(--menu-background-color);
+							--menu-submenu-max-num-of-columns: 6;
+							transition: opacity .2s
+						}
+				
+						@media only screen and (max-width: 680px) {
+							html:not([style*=--]) .top_menu {
+								opacity: 0 !important
+							}
+						}
+				
+						.website[menu-collapse=true] .top_menu .buttons .button_preset_1,
+						.website[menu-collapse=true] .top_menu .buttons .button_preset_2,
+						.website[menu-collapse=true] .top_menu .buttons .button_preset_3 {
+							display: flex;
+							justify-content: center;
+							align-content: center;
+							flex-direction: column
+						}
+				
 						
 		menu.top_menu h1,
 		menu.top_menu h2,
