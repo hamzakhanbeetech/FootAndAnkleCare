@@ -3,6 +3,25 @@
     background: black;
 }
 
+.max-r{
+    
+    top: -21px;
+    position: relative;
+    color: #b4afaf;
+}
+
+.seprate{
+    
+    font-size: 45px;
+    color: #b4afaf;
+}
+
+.total-review {
+    left: -120px;
+    top: 10px;
+    position: relative;
+}
+
 @media screen,
 projection {
     footer {
@@ -47,7 +66,6 @@ projection {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1500px;
     }
 }
 @media (max-width: 450px) {
