@@ -1,0 +1,160 @@
+
+#footer {
+    background: black;
+}
+
+@media screen,
+projection {
+    footer {
+        background: #151515;
+    }
+}
+
+footer {
+    display: block;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+main {
+    display: block;
+}
+
+.c-main {
+    overflow: hidden;
+}
+
+
+
+
+
+
+@media screen,
+projection {
+    .content {
+        margin: 0 auto;
+        text-align: left;
+        width: 100%;
+        max-width: 1180px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .content {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1500px;
+    }
+}
+@media (max-width: 450px) {
+
+    .content {
+        display: block;
+    }
+.img-footer {
+    margin-top: 30px;
+}
+    
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+.img-footer {
+    border: none;
+    border-style: none;
+    font-style: italic;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+@media screen,
+projection {
+    .logo-footer {
+        max-width: 300px;
+    }
+
+    .copy-left {
+        color: white;
+        font-size: 14px;
+        padding: 30px;
+    }
+
+    .copy-right {
+        color: white;
+        font-size: 14px;
+        padding: 30px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .footer-para {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #222;
+    }
+}
+
+.footer-para {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.3rem;
+}
+
+@media screen,
+projection {
+    .footer-para {
+        color: white;
+    }
+
+    .footer-a-tags {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.footer-a-tags {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: #666;
+    text-decoration: none;
+}
+
+@media screen,
+projection {
+    .copy-left .footer-a-tags {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.footer-a-tags:hover {
+    text-decoration: none;
+}
+
+@media screen,
+projection {
+    .copy-left .footer-a-tags:hover {
+        text-decoration: underline;
+    }
+
+    .copy-right .footer-a-tags {
+        color: white;
+        text-decoration: none;
+    }
+
+    .copy-right .footer-a-tags:hover {
+        text-decoration: underline;
+    }
+}
