@@ -142,7 +142,7 @@
                 </div><br>
                 <div>
                     <label>Date of birth</label>
-                    <input type="datetime-local" class="common-input" placeholder="date of birth">
+                    <input type="date" class="common-input" placeholder="date of birth">
                 </div><br>
                 <div>
                     <p>Sex </p>
