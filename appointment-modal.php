@@ -94,6 +94,15 @@
             color: #004852;
         }
     </style>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -110,7 +119,7 @@
             <h1>Appointment Request</h1>
             <hr>
 
-            <form action="mymail.php" method="post">
+            <form name="myForm" action="mymail.php" method="post" onsubmit="return validateForm()">
                 <div>
                     <p>Are you a new or returning patient?</p>
 
@@ -133,7 +142,7 @@
                     <input type="text" class="common-input" name="last_name" placeholder="last name">
                 </div><br>
                 <div>
-                    <label>Email</label>
+                    <label>Email *</label>
                     <input type="email" class="common-input" name="email" placeholder="email">
                 </div><br>
                 <div>
@@ -157,31 +166,8 @@
                 </div><br>
                 <div>
                     <label>Reason</label>
-                    <input type="text" class="common-input" name="message" placeholder="phone number">
+                    <input type="text" class="common-input" name="message" placeholder="reason">
                 </div><br><br>
-                <div>
-
-                    <label class="container">
-                        I have read and agreed to the
-                        <a href="">
-                            Privacy Policy
-                        </a>
-                        and
-                        <a href="">
-                            Terms of Use
-                        </a>
-                        and I am at least 13 and have the authority to make this appointment.
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <label class="container">
-                        I agree to receive text messages from this practice and understand that message frequency and
-                        data rates may apply.
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
                 <hr>
 
                 <div>
