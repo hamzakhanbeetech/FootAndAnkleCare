@@ -1,24 +1,3 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "hkhan1241@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    header("Location: appointment-success-msg.html");
-    }
-?>
 <html lang="en">
 
 <head>
@@ -31,8 +10,6 @@ if(isset($_POST['submit'])){
 
     <style>
         /* If you like this, be sure to ❤️ it. */
-
-
 
         .modal {
             position: absolute;
@@ -65,7 +42,9 @@ if(isset($_POST['submit'])){
         
         @media (max-width: 450px) {
             .modal__content {
+            margin: 0em 0em;
                 padding: 5px;
+                padding-top: 80px;
             }
         }
 
@@ -131,7 +110,7 @@ if(isset($_POST['submit'])){
             <h1>Appointment Request</h1>
             <hr>
 
-            <form action="" method="post">
+            <form action="mymail.php" method="post">
                 <div>
                     <p>Are you a new or returning patient?</p>
 
@@ -155,7 +134,7 @@ if(isset($_POST['submit'])){
                 </div><br>
                 <div>
                     <label>Email</label>
-                    <input type="email" class="common-input" name="email" placeholder="first name">
+                    <input type="email" class="common-input" name="email" placeholder="email">
                 </div><br>
                 <div>
                     <label>Phone</label>
