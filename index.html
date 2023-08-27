@@ -5,10 +5,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Blitso Chatbot -->
-<script src="https://assistant.blitso.ai/component-v1.js" async></script>
+<!-- <script src="https://assistant.blitso.ai/component-v1.js" async></script>
 <script>
   window.blitsoSettings = { key: 'hMWfFV1dBXh2It2W' };
-</script>
+</script> -->
+<script type="text/javascript">
+	if (!Array.isArray(window.qbOptions)) {
+	  window.qbOptions = []
+	}
+	window.qbOptions.push({"baseUrl":"https://botsrv2.com","use":"KoPqxmzY8Jbg5eNl/MnyjZrgnwdmdv40x"});
+  </script>
+  <script type="text/javascript" src="https://static.botsrv2.com/website/js/widget2.94a02b9e.min.js" integrity="sha384-UsJPS77mAnl5lrMyiywMwUHkQOPreOlJhC8fVH3F7PkvULsN5gQRr3LoGt3oeUBB" crossorigin="anonymous" defer data-no-minify="1" data-cfasync="false"></script>
+
 	<script type="application/ld+json">
 				{"@context": "https://schema.org","@type": "Physician","@id":"https://www.cypressfootandanklecenter.com/24e621d7-b821-466a-956e-b25178eba6a5","url":"https://www.cypressfootandanklecenter.com","brand":{"name":["Cypress Foot & Ankle Center"]},"name":["Kunal Amin, DPM"],"image":"https://sa1s3optim.patientpop.com/assets/production/practices/f617fcb38bd0f6471b16f4cebb3bda1d3d019de6/images/2552915.jpg","potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.cypressfootandanklecenter.com/schedule?utm_medium=markup","inLanguage":"en-US","actionPlatform":["https://schema.org\/DesktopWebPlatform","https://schema.org/\/IOSPlatform","https://schema.org\/AndroidPlatform"]},"result":{"@type":"Reservation","name":"Book Online"}},"telephone":"281-377-4040","openingHours":["MON Closed","TUE 8:00 AM - 6:00 PM","WED Closed","THU 8:00 AM - 6:00 PM","FRI 8:00 AM - 6:00 PM","SAT 9:00 AM - 1:00 PM","SUN Closed"],"contactPoint":[{"@type":"ContactPoint","telephone":"281-377-4040","contactType":"reservations"},{"@type":"ContactPoint","telephone":"281-377-4040","contactType":"customer service"}],"address":{"@type":"PostalAddress","streetAddress":"16700 House Hahl Road Building 8-B","addressLocality":"Cypress","addressRegion":"TX","postalCode":"77433","addressCountry":"USA"},"priceRange":"Free Confidential Consultation"}
 			</script>
@@ -7075,11 +7083,11 @@ body {
 										</div>
 									</div>
 								</div>
-								<a href="/s/?u=2A68hkJR9IQMqZlKHuYWGe8ZQ2JuG5kvT24hvvnsYlMuebXGY7lmTw3Q1Q5pixiBWGTN8QDVnJBB4OBkYKqcZyIMc0zt3O7rkgtZ4z5KXFbt8bZpEz5Q4xeryltM0045r0zSrDJ"
+								<a href="/appointment-modal.php"
 									class="schedule-a-tag cta-appointment" title="Call for an appointment">
 									Call for an appointment
 								</a>
-								<a href="/s/?u=BMFl57NrndBAOKz7TF2OD8bqYKJtGalzSA7uOqncDxFnI3cHSx6oV9L9zhUgTeOFDg0OQlxuHPIKK0vnmVd2QyCUAdLswa6pfTgKXcLA9ztGlkreXmgkISBoVdpE8"
+								<a href="https://www.google.com/maps/place/Cypress+Foot+%26+Ankle+Center:+Kunal+Amin,+DPM/@29.9603488,-95.7121364,17z/data=!3m1!4b1!4m6!3m5!1s0x8640d5fd55a9a377:0xac31ece6119bb336!8m2!3d29.9603442!4d-95.7095615!16s%2Fg%2F11t762ffz6?entry=ttu"
 									target="_blank" rel="noopener noreferrer" class="schedule-a-tag loc-btn" title="Directions">
 									Directions
 								</a>
@@ -8889,12 +8897,28 @@ ol, li {
 
 				<section id="map-section">
 					<style>
+						.map-img-desktop{
+							display: block;
+
+						}
+						.map-img-mob{
+							display: none;
+
+						}
 						.map-article{
 							width: 100%; height: 485px
 						}
 						@media screen and (max-width:450px){
 						.map-article{
-							width: 100%; height: 230px
+							width: 100%; height: 285px;
+						}
+						.map-img-desktop{
+							display: none;
+
+						}
+						.map-img-mob{
+							display: block;
+
 						}
 
 						}
@@ -8921,12 +8945,16 @@ ol, li {
 								data-iframe-title="" class="multimap-container"
 								id=" mm-id-vbid-b50f71be-4633-403b-80bf-5b70c94db581_0">
 								<a
+								class="mo"
 								style="width: 100%; height: 100%"
 								href="https://www.google.com/maps/place/Cypress+Foot+%26+Ankle+Center:+Kunal+Amin,+DPM/@29.9603488,-95.7121364,17z/data=!3m1!4b1!4m6!3m5!1s0x8640d5fd55a9a377:0xac31ece6119bb336!8m2!3d29.9603442!4d-95.7095615!16s%2Fg%2F11t762ffz6?entry=ttu"
 								target="_blank">
-									<img width="100%" height="100%" src="/assets/location-img.png">
+									<img class="map-img-desktop" width="100%" height="100%" src="/assets/location-img.png">
+									
+									<img class="map-img-mob" width="100%" height="100%" src="/assets/location-img-mob.jpeg">
 
 								</a>
+
 								<!-- <div class="multimap-controls" style="display:none">
 									<div class="multimap-controls-prev-scroller">
 										<div class="multimap-controls-prev-scroller-button up hidden"><svg

@@ -929,14 +929,6 @@
 			margin: 0
 		}
 
-		img {
-			display: none
-		}
-
-		img[src] {
-			display: inline-block
-		}
-
 		h1,
 		h2,
 		h3,
@@ -2863,7 +2855,7 @@
 		.website section article .pic-side {
 			position: relative;
 			min-height: inherit;
-			height: 75%;
+			height: 67%;
 			width: 100%;
 			flex-grow: 1
 		}
@@ -7295,6 +7287,26 @@
 						#vbid-73adbedb-c200-4399-b3c9-18ae471955d3 .section-header [data-elementtype=ICON] {
 							height: 65px
 						}
+						
+						.map-img-desktop{
+							display: block;
+
+						}
+						.map-img-mob{
+							display: none;
+
+						}
+						@media screen and (max-width:450px){
+						
+						.map-img-desktop{
+							display: none;
+
+						}
+						.map-img-mob{
+							display: block;
+
+						}
+						}
 					</style>
 					<div class="children">
 						<div class="section-children">
@@ -7314,7 +7326,8 @@
 										style="width: 100%; height: 100%"
 										href="https://www.google.com/maps/place/Cypress+Foot+%26+Ankle+Center:+Kunal+Amin,+DPM/@29.9603488,-95.7121364,17z/data=!3m1!4b1!4m6!3m5!1s0x8640d5fd55a9a377:0xac31ece6119bb336!8m2!3d29.9603442!4d-95.7095615!16s%2Fg%2F11t762ffz6?entry=ttu"
 										target="_blank">
-											<img width="100%" height="100%" src="/assets/location-img.png">
+											<img class="map-img-desktop" width="100%" height="100%" src="/assets/location-img.png">
+											<img class="map-img-mob" width="100%" height="100%" src="/assets/location-img-mob.jpeg">
 		
 										</a>
 										<!-- <div class="multimap-controls" style="display:none">

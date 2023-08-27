@@ -147,20 +147,20 @@
                 </div><br>
                 <div>
                     <label>Phone</label>
-                    <input class="common-input" placeholder="phone number">
+                    <input class="common-input" name="phone" placeholder="phone number">
                 </div><br>
                 <div>
                     <label>Date of birth</label>
-                    <input type="date" class="common-input" placeholder="date of birth">
+                    <input type="date" class="common-input" name="date_of_birth" placeholder="date of birth">
                 </div><br>
                 <div>
                     <p>Sex </p>
                     <label class="container">Male
-                        <input type="radio" checked="checked" name="radio">
+                        <input type="radio" checked="checked" name="sex" value="male">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">Female
-                        <input type="radio" name="radio">
+                        <input type="radio" name="sex" value="female">
                         <span class="checkmark"></span>
                     </label>
                 </div><br>
